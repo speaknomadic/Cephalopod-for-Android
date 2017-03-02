@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Cephalopod-for-Android.iml" filepath="$PROJECT_DIR$/Cephalopod-for-Android.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CephalopodforAndroid/CephalopodforAndroid.iml" filepath="$PROJECT_DIR$/CephalopodforAndroid/CephalopodforAndroid.iml" />
+    </modules>
+  </component>
+</project>

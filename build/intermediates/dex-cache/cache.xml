@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="true"
+        jar="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="2744c0fe92b1914e75eefba9621a718d598b7ef9">
+        <dex dex="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_21b18c043d437e693c7f3073dcd73187298ea9f5\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\incremental-runtime-classes\debug\instant-run.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="7e579cbcf58d94f4f7dbcb5ea449a04149732a89">
+        <dex dex="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_f0cf3179240624fd4c343065001bc15d54198ca9\classes.dex" />
+    </item>
+
+</items>

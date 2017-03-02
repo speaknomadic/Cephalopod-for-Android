@@ -1,0 +1,7 @@
+#Thu Mar 02 18:39:34 EET 2017
+base.0=C\:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_f0cf3179240624fd4c343065001bc15d54198ca9
+renamed.1=classes2.dex
+renamed.0=classes.dex
+file.1=C\:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_21b18c043d437e693c7f3073dcd73187298ea9f5\\classes.dex
+base.1=C\:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run-bootstrap_21b18c043d437e693c7f3073dcd73187298ea9f5
+file.0=C\:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\build\\intermediates\\transforms\\dex\\debug\\folders\\1000\\10\\instant-run_f0cf3179240624fd4c343065001bc15d54198ca9\\classes.dex

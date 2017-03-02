@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<instant-run
+    abi="x86"
+    api-level="23"
+    density="xxxhdpi"
+    format="8"
+    plugin-version="2.2.3"
+    timestamp="71996950635958"
+    token="3440327870703662407"
+    verifier="COLD_SWAP_REQUESTED" >
+
+    <task
+        name="javac"
+        duration="189" />
+    <task
+        name="instant-run-dex"
+        duration="0" />
+    <task
+        name="instant-run-transform"
+        duration="38" />
+    <task
+        name="verifier"
+        duration="3" />
+
+    <artifact
+        location="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+        type="DEX" />
+
+    <build
+        timestamp="71901625176786"
+        verifier="FULL_BUILD_REQUESTED" >
+        <artifact
+            location="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\outputs\apk\CephalopodforAndroid-debug.apk"
+            type="MAIN" />
+    </build>
+    <build
+        timestamp="71996950635958"
+        verifier="COLD_SWAP_REQUESTED" >
+        <artifact
+            location="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\5\slice_5\classes.dex"
+            type="DEX" />
+    </build>
+
+</instant-run>

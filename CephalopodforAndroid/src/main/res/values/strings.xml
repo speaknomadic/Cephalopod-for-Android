@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="hello_world"></string>
+    <string name="app_name">Cephalopod Board Game</string>
+    <string name="title_activity_game">Cephalopod by Mark Steere</string>
+
+</resources>
