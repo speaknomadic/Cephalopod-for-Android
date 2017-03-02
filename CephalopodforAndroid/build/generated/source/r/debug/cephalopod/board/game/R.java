@@ -11,7 +11,48 @@ public final class R {
     public static final class attr {
     }
     public static final class drawable {
-        public static final int ic_launcher=0x7f020000;
+        public static final int blue01=0x7f020000;
+        public static final int blue02=0x7f020001;
+        public static final int blue03=0x7f020002;
+        public static final int blue04=0x7f020003;
+        public static final int blue05=0x7f020004;
+        public static final int blue06=0x7f020005;
+        public static final int dice=0x7f020006;
+        public static final int empty=0x7f020007;
+        public static final int ic_launcher=0x7f020008;
+        public static final int red01=0x7f020009;
+        public static final int red02=0x7f02000a;
+        public static final int red03=0x7f02000b;
+        public static final int red04=0x7f02000c;
+        public static final int red05=0x7f02000d;
+        public static final int red06=0x7f02000e;
+    }
+    public static final class id {
+        public static final int cell00=0x7f060000;
+        public static final int cell01=0x7f060001;
+        public static final int cell02=0x7f060002;
+        public static final int cell03=0x7f060003;
+        public static final int cell04=0x7f060004;
+        public static final int cell10=0x7f060005;
+        public static final int cell11=0x7f060006;
+        public static final int cell12=0x7f060007;
+        public static final int cell13=0x7f060008;
+        public static final int cell14=0x7f060009;
+        public static final int cell20=0x7f06000a;
+        public static final int cell21=0x7f06000b;
+        public static final int cell22=0x7f06000c;
+        public static final int cell23=0x7f06000d;
+        public static final int cell24=0x7f06000e;
+        public static final int cell30=0x7f06000f;
+        public static final int cell31=0x7f060010;
+        public static final int cell32=0x7f060011;
+        public static final int cell33=0x7f060012;
+        public static final int cell34=0x7f060013;
+        public static final int cell40=0x7f060014;
+        public static final int cell41=0x7f060015;
+        public static final int cell42=0x7f060016;
+        public static final int cell43=0x7f060017;
+        public static final int cell44=0x7f060018;
     }
     public static final class layout {
         public static final int activity_game=0x7f030000;
