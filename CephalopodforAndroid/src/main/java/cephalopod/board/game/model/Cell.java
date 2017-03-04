@@ -36,7 +36,48 @@ public class Cell {
 		this.type = type;
 		this.size = size;
 	}
+
+	
 	
 	//TODO Create getters and setters.
+	public Type getType() {
+		return type;
+	}
+
+	public void setType(Type type) {
+		this.type = type;
+	}
+
+	public Size getSize() {
+		return size;
+	}
+
+	public void setSize(Size size) {
+		this.size = size;
+	}
 	//TODO Create equals and hash code methods.
+
+	@Override
+	public int hashCode() {
+		return this.type.hashCode() + this.size.hashCode();
+	}
+
+
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Cell other = (Cell) obj;
+		if (size != other.size)
+			return false;
+		if (type != other.type)
+			return false;
+		return true;
+	}
+	
 }
