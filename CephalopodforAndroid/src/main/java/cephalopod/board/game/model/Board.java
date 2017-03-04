@@ -27,20 +27,20 @@ public class Board {
 
 		return result;
 	}
-	
+
 	private int turn = 0;
 
 	private boolean gameOver = false;
-	
+
 	private Cell cells[][] = initial();
-	
+
 	/**
 	 * Initialize the game in the starting conditions.
 	 */
 	public void reset() {
-		//TODO
+		this.cells = initial();
 	}
-	
+
 	/**
 	 * Handle player's click.
 	 * 
@@ -52,8 +52,11 @@ public class Board {
 	 * @return True if the click was valid move, false otherwise.
 	 */
 	public boolean click(int x, int y) {
-		//TODO
-		
+		// TODO
+		if (x > 0 && x < 5 && y > 0 && y < 5) {
+			return true;
+		}
+
 		return false;
 	}
 
@@ -63,22 +66,51 @@ public class Board {
 	 * @return True if there is a winner, false otherwise.
 	 */
 	public boolean hasWinner() {
-		//TODO
-		
+		if (this.gameOver == true) {
+			return true;
+		}
 		return false;
 	}
-	
+
 	/**
 	 * Provide winner type.
 	 * 
 	 * @return Winner type.
 	 */
 	public Cell.Type winner() {
-		//TODO 
-		
-		return Type.EMPTY;
+		int counterForEmpty = 0;
+		int counterForRed = 0;
+		int counterForBlue = 0;
+		if (this.gameOver == true) {
+			for (int i = 0; i < cells.length; i++) {
+				for (int j = 0; j < cells[0].length; j++) {
+					if (cells[i][j].getType() == Type.EMPTY) {
+						counterForEmpty++;
+					}
+					if (cells[i][j].getType() == Type.RED) {
+						counterForRed++;
+					}
+					if (cells[i][j].getType() == Type.BLUE) {
+						counterForBlue++;
+					}
+				}
+			}
+		} else {
+			System.out.println("You havent finish the game yet.");
+		}
+		Type t = Type.EMPTY;
+		if (counterForBlue > counterForRed) {
+			t = Type.BLUE;
+		}
+		if (counterForBlue < counterForRed) {
+			t = Type.RED;
+		} else {
+			t = null;
+		}
+
+		return t;
 	}
-	
+
 	/**
 	 * Evaluate scores of different players.
 	 * 
@@ -86,13 +118,43 @@ public class Board {
 	 */
 	public Map<Type, Integer> score() {
 		Map<Type, Integer> result = new HashMap<Type, Integer>();
+		int counterForEmpty = 0;
+		int counterForRed = 0;
+		int counterForBlue = 0;
+		for (int i = 0; i < cells.length; i++) {
+			for (int j = 0; j < cells[0].length; j++) {
+				if (cells[i][j].getType() == Type.EMPTY) {
+					counterForEmpty++;
 
-		//TODO 
+				}
+				if (cells[i][j].getType() == Type.RED) {
+					counterForRed++;
+					result.put(Type.RED, counterForRed);
+				}
+				if (cells[i][j].getType() == Type.BLUE) {
+					counterForBlue++;
+					result.put(Type.BLUE, counterForBlue);
+				}
+			}
+		}
 
 		return result;
 	}
-	
-	//TODO Create constructors.
-	//TODO Create getters and setters.
-	//TODO Create equals and hash code methods.
+
+	// TODO Create constructors. - no need of them
+
+	// TODO Create getters and setters.
+	public int getTurn() {
+		return turn;
+	}
+
+	public boolean isGameOver() {
+		return gameOver;
+	}
+
+	public void setGameOver(boolean gameOver) {
+		this.gameOver = gameOver;
+	}
+
+	// TODO Create equals and hash code methods. - no need of them
 }
