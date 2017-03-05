@@ -42,16 +42,11 @@ public class Board {
 		this.cells = initial();
 	}
 
-	/**
-	 * Handle player's click.
-	 * 
-	 * @param x
-	 *            X coordinate.
-	 * @param y
-	 *            Y coordinate.
-	 * 
-	 * @return True if the click was valid move, false otherwise.
-	 */
+	/*
+	 * Check if the move is valid.
+	 * @return true if it is.
+	 * false otherwise.
+	 * */
 
 	private boolean validMove(int x, int y) {
 
@@ -63,10 +58,23 @@ public class Board {
 		}
 		return true;
 	}
-
+/**
+ * 
+ * @param yourX
+ * 					x of your cell
+ * @param yourY
+ * 					y of your cell
+ * @param x1
+ * @param y1
+ * @param x2
+ * @param y2
+ * 			parameters of cells which you want to take.
+ * @return
+ * 			new size of the cell which you clicked
+ */
 	private Size chooseTwoCells(int yourX, int yourY, int x1, int y1, int x2, int y2) {
 		int sum = cells[x1][y1].getSize().getValue() + cells[x2][y2].getSize().getValue();
-		if (sum < 6) {
+		if (sum <= 6) {
 			cells[yourX][yourY].setSize(cells[yourX][yourY].getSize().giveMeSize(sum));
 		} else {
 			cells[yourX][yourY].setSize(Size.ONE);
@@ -75,10 +83,26 @@ public class Board {
 		return cells[yourX][yourY].getSize();
 	}
 
+	/**
+	 * 
+	 * @param yourX
+	 * 					x of your cell
+	 * @param yourY
+	 * 					y of your cell
+	 * @param x1
+	 * @param y1
+	 * @param x2
+	 * @param y2
+	 * @param x3
+	 * @param y3
+	 * 			parameters of cells which you want to take.
+	 * @return
+	 * 			new size of the cell which you clicked
+	 */
 	private Size chooseThreeCells(int yourX, int yourY, int x1, int y1, int x2, int y2, int x3, int y3) {
 		int sum = cells[x1][y1].getSize().getValue() + cells[x2][y2].getSize().getValue()
 				+ cells[x3][y3].getSize().getValue();
-		if (sum < 6) {
+		if (sum <= 6) {
 			cells[yourX][yourY].setSize(cells[yourX][yourY].getSize().giveMeSize(sum));
 		} else {
 			cells[yourX][yourY].setSize(Size.ONE);
@@ -86,15 +110,44 @@ public class Board {
 		return cells[yourX][yourY].getSize();
 	}
 
+	/**
+	 * 
+	 * @param yourX
+	 * 					x of your cell
+	 * @param yourY
+	 * 					y of your cell
+	 * @param x1
+	 * @param y1
+	 * @param x2
+	 * @param y2
+	 * @param x3
+	 * @param y3
+	 * @param x4
+	 * @param y4
+	 * 			parameters of cells which you want to take.
+	 * @return
+	 * 			new size of the cell which you clicked
+	 */	
 	private Size chooseFourCells(int yourX, int yourY, int x1, int y1, int x2, int y2, int x3, int y3,int x4,int y4) {
 		int sum = cells[x1][y1].getSize().getValue() + cells[x2][y2].getSize().getValue() + cells[x3][y3].getSize().getValue()+cells[x4][y4].getSize().getValue();
-		if (sum < 6) {
+		if (sum <= 6) {
 			cells[yourX][yourY].setSize(cells[yourX][yourY].getSize().giveMeSize(sum));
 		} else {
 			cells[yourX][yourY].setSize(Size.ONE);
 		}
 		return cells[yourX][yourY].getSize();
 	}
+	/**
+	 * 
+	 * @param x
+	 * 		x of your cell
+	 * @param y
+	 * 		y of your cell
+	 * @param type
+	 * 		type of your cell(RED or BLUE)
+	 * @return true if the click is valid and calculate the size of the cell
+	 * false otherwise
+	 */
 	public boolean click(int x, int y,Type type) {
 		cells[x][y].setType(type);
 		cells[x][y].showType();
