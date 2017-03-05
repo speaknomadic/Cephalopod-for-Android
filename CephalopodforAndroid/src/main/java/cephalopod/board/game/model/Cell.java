@@ -41,8 +41,44 @@ public class Cell {
     }
 
     // TODO Add Java Doc comments.
+    @Override
+    public int hashCode() {
+        return this.type.hashCode() + this.size.hashCode();
+    }
+
+    // TODO Add Java Doc comments.
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {
+            return true;
+        }
+        if (obj == null) {
+            return false;
+        }
+        if (getClass() != obj.getClass()) {
+            return false;
+        }
+        Cell other = (Cell) obj;
+        if (size != other.size) {
+            return false;
+        }
+        if (type != other.type) {
+            return false;
+        }
+        return true;
+    }
+
+    // TODO Add Java Doc comments.
     public enum Size {
         ZERO(0), ONE(1), TWO(2), THREE(3), FOUR(4), FIVE(5), SIX(6);
+
+        // TODO Add Java Doc comments.
+        private int value = -1;
+
+        // TODO Add Java Doc comments.
+        private Size(int id) {
+            this.value = id;
+        }
 
         // TODO Add Java Doc comments.
         public static Size instanceOf(int size) {
@@ -65,14 +101,6 @@ public class Cell {
                 default:
                     throw new RuntimeException("Invalid size of: " + size);
             }
-        }
-
-        // TODO Add Java Doc comments.
-        private int value = -1;
-
-        // TODO Add Java Doc comments.
-        private Size(int id) {
-            this.value = id;
         }
 
         // TODO Add Java Doc comments.
@@ -106,33 +134,5 @@ public class Cell {
         public String symbol() {
             return symbol;
         }
-    }
-
-    // TODO Add Java Doc comments.
-    @Override
-    public int hashCode() {
-        return this.type.hashCode() + this.size.hashCode();
-    }
-
-    // TODO Add Java Doc comments.
-    @Override
-    public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        Cell other = (Cell) obj;
-        if (size != other.size) {
-            return false;
-        }
-        if (type != other.type) {
-            return false;
-        }
-        return true;
     }
 }

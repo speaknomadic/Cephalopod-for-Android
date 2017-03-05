@@ -9,13 +9,38 @@ import cephalopod.board.game.model.Cell.Type;
 
 //TODO Add Java Doc comments.
 public class Board {
+    //TODO Add Java Doc comments.
     public static final int ROWS = 5;
 
+    //TODO Add Java Doc comments.
     public static final int COLS = 5;
+
+    //TODO Add Java Doc comments.
     private int turn = 0;
+
+    //TODO Add Java Doc comments.
     private boolean gameOver = false;
+
+    //TODO Add Java Doc comments.
     private Cell cells[][] = initial();
 
+    /**
+     * Copy constructor.
+     *
+     * @param original The original object.
+     */
+    public Board(Board original) {
+        // TODO Create copy constructors.
+    }
+
+    /**
+     * Constructor withoout parameters.
+     */
+    public Board() {
+        super();
+    }
+
+    //TODO Add Java Doc comments.
     private static Cell[][] initial() {
         Cell result[][] = {
                 {new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO),
@@ -36,15 +61,17 @@ public class Board {
      * Initialize the game in the starting conditions.
      */
     public void reset() {
-        this.cells = initial();
+        turn = 0;
+        gameOver = false;
+        cells = initial();
     }
 
-	/*
+    /**
      * Check if the move is valid.
-	 * @return true if it is.
-	 * false otherwise.
-	 * */
-
+     *
+     * @return true if it is.
+     * false otherwise.
+     */
     private boolean validMove(int x, int y) {
 
         if (x < 0 || x >= 5 || y < 0 || y >= 5) {
@@ -603,49 +630,62 @@ public class Board {
      * @return True if there is a winner, false otherwise.
      */
     public boolean hasWinner() {
-        if (this.gameOver == true) {
-            return true;
+        for (int i = 0; i < cells.length; i++) {
+            for (int j = 0; j < cells[i].length; j++) {
+                if (cells[i][j].getType() == Cell.Type.EMPTY) {
+                    return false;
+                }
+            }
         }
-        return false;
+
+        return true;
     }
 
     /**
-     * Provide winner type.
+     * Provide winner as cell type value.
      *
-     * @return Winner type.
+     * @return Winner type or empty value if the board is empty.
      */
     public Cell.Type winner() {
-        int counterForEmpty = 0;
-        int counterForRed = 0;
-        int counterForBlue = 0;
-        if (this.gameOver == true) {
-            for (int i = 0; i < cells.length; i++) {
-                for (int j = 0; j < cells[0].length; j++) {
-                    if (cells[i][j].getType() == Type.EMPTY) {
-                        counterForEmpty++;
-                    }
-                    if (cells[i][j].getType() == Type.RED) {
-                        counterForRed++;
-                    }
-                    if (cells[i][j].getType() == Type.BLUE) {
-                        counterForBlue++;
-                    }
-                }
-            }
-        } else {
-            System.out.println("You havent finish the game yet.");
-        }
-        Type t = Type.EMPTY;
-        if (counterForBlue > counterForRed) {
-            t = Type.BLUE;
-        }
-        if (counterForBlue < counterForRed) {
-            t = Type.RED;
-        } else {
-            t = null;
+        Map<Type, Integer> counters = new HashMap<Type, Integer>();
+
+		/*
+         * Initialize counters.
+		 */
+        for (Type type : Type.values()) {
+            counters.put(type, 0);
         }
 
-        return t;
+		/*
+         * Score players.
+		 */
+        for (int i = 0; i < cells.length; i++) {
+            for (int j = 0; j < cells[i].length; j++) {
+                Type type = cells[i][j].getType();
+                counters.put(type, 1 + counters.get(type));
+            }
+        }
+
+        /*
+         * Empty cells has no information for the winning player.
+         */
+        counters.remove(Type.EMPTY);
+
+        /*
+         * Find the winner.
+         */
+        int max = 0;
+        Type winner = Type.EMPTY;
+        for (Type type : Type.values()) {
+            if (counters.get(type) < max) {
+                continue;
+            }
+
+            winner = type;
+            max = counters.get(type);
+        }
+
+        return winner;
     }
 
     /**
@@ -655,42 +695,40 @@ public class Board {
      */
     public Map<Type, Integer> score() {
         Map<Type, Integer> result = new HashMap<Type, Integer>();
-        int counterForEmpty = 0;
-        int counterForRed = 0;
-        int counterForBlue = 0;
-        for (int i = 0; i < cells.length; i++) {
-            for (int j = 0; j < cells[0].length; j++) {
-                if (cells[i][j].getType() == Type.EMPTY) {
-                    counterForEmpty++;
 
-                }
-                if (cells[i][j].getType() == Type.RED) {
-                    counterForRed++;
-                    result.put(Type.RED, counterForRed);
-                }
-                if (cells[i][j].getType() == Type.BLUE) {
-                    counterForBlue++;
-                    result.put(Type.BLUE, counterForBlue);
-                }
+		/*
+         * Initialize counters.
+		 */
+        for (Type type : Type.values()) {
+            result.put(type, 0);
+        }
+
+		/*
+         * Score players.
+		 */
+        for (int i = 0; i < cells.length; i++) {
+            for (int j = 0; j < cells[i].length; j++) {
+                Type type = cells[i][j].getType();
+                result.put(type, 1 + result.get(type));
             }
         }
 
         return result;
     }
 
-    // TODO Create constructors. - no need of them
-
     // TODO Create getters and setters.
     public int getTurn() {
         return turn;
     }
 
+    //TODO Add Java Doc comments.
     public boolean isGameOver() {
         return gameOver;
     }
 
-    public void setGameOver(boolean gameOver) {
-        this.gameOver = gameOver;
+    //TODO Add Java Doc comments.
+    public void setGameOver() {
+        gameOver = true;
     }
 
     // TODO Create equals and hash code methods. - no need of them
