@@ -12,6 +12,35 @@ public class Cell {
 		private Size(int id) {
 			this.value = id;
 		}
+		public int getValue(){
+			return value;
+		}
+		public Size giveMeSize(int n){
+			Size t = null;
+			if(n == 0){
+				t = Size.ZERO;
+			}
+			if(n == 1){
+				t= Size.ONE;
+			}
+			if(n == 2){
+				t = Size.TWO;
+			}
+			if(n == 3){
+				t = Size.THREE;
+			}
+			if(n == 4){
+				t = Size.FOUR;
+			}
+			if(n == 5){
+				t = Size.FIVE;
+			}
+			if(n == 6){
+				t = Size.SIX;
+			}
+			return t;
+			
+		}
 	}
 
 	// TODO Add Java Doc comments.
@@ -25,6 +54,12 @@ public class Cell {
 		private Type(int id, String symbol) {
 			this.id = id;
 			this.symbol = symbol;
+		}
+		public int getId(){
+			return id;
+		}
+		public String getSymbol(){
+			return symbol;
 		}
 	}
 
@@ -54,6 +89,9 @@ public class Cell {
 
 	public void setSize(Size size) {
 		this.size = size;
+	}
+	public void showType(){
+		System.out.println(this.getType());
 	}
 	//TODO Create equals and hash code methods.
 
