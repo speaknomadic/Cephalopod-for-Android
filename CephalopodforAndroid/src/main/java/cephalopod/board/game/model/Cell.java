@@ -1,52 +1,88 @@
 package cephalopod.board.game.model;
 
-//TODO Add Java Doc comments.
+/**
+ * Cell class describes single cell.
+ */
 public class Cell {
 
-    // TODO Add Java Doc comments.
+    /**
+     * Cell type.
+     */
+
     private Type type;
 
-    // TODO Add Java Doc comments.
+    /**
+     * Cell size.
+     */
     private Size size;
 
-    // TODO Add Java Doc comments.
+    /**
+     * Constructor.
+     *
+     * @param type
+     *            Cell type.
+     * @param size
+     *            Cell size.
+     */
     public Cell(Type type, Size size) {
         this.type = type;
         this.size = size;
     }
 
-    //TODO Create getters and setters.
+    /**
+     * Cell type getter.
+     *
+     * @return Type of the cell.
+     */
     public Type getType() {
         return type;
     }
 
-    //TODO Create getters and setters.
+    /**
+     * Cell type setter.
+     *
+     * sets Type of the cell.
+     */
     public void setType(Type type) {
         this.type = type;
     }
 
-    //TODO Create getters and setters.
+    /**
+     * Cell size getter.
+     *
+     * @return Size of the cell.
+     */
     public Size getSize() {
         return size;
     }
 
-    //TODO Create getters and setters.
+    /**
+     * Cell size setter.
+     *
+     * sets Size of the cell.
+     */
     public void setSize(Size size) {
         this.size = size;
     }
 
-    //TODO Create getters and setters.
+    /**
+     * shows Type of the cell.
+     */
     public void showType() {
         System.out.println(this.getType());
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public int hashCode() {
         return this.type.hashCode() + this.size.hashCode();
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -68,19 +104,32 @@ public class Cell {
         return true;
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * Cell size.
+     */
     public enum Size {
         ZERO(0), ONE(1), TWO(2), THREE(3), FOUR(4), FIVE(5), SIX(6);
 
-        // TODO Add Java Doc comments.
+        /**
+         * Size value of the cell.
+         */
         private int value = -1;
 
-        // TODO Add Java Doc comments.
+        /**
+         * Constructor.
+         *
+         * @param id
+         *            Size value of the cell.
+         */
         private Size(int id) {
             this.value = id;
         }
 
-        // TODO Add Java Doc comments.
+        /**
+         * Convert from int to Size.
+         * @param size
+         * @return Size of the cell.
+         */
         public static Size instanceOf(int size) {
             switch (size) {
                 case 0:
@@ -103,34 +152,58 @@ public class Cell {
             }
         }
 
-        // TODO Add Java Doc comments.
+        /**
+         * Cell value getter
+         * @return value.
+         */
         public int getValue() {
             return value;
         }
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * Cell type.
+     */
     public enum Type {
         EMPTY(0, " "), RED(1, "R"), BLUE(2, "B");
 
-        // TODO Add Java Doc comments.
+        /**
+         * Size value of the cell.
+         */
         private int id = -1;
 
-        // TODO Add Java Doc comments.
+        /**
+         * String symbol value of the cell.
+         */
         private String symbol = "";
 
-        // TODO Add Java Doc comments.
+        /**
+         * Constructor.
+         *
+         * @param id
+         *            Object identifier.
+         * @param symbol
+         *            Symbols used in to string printing.
+         */
         private Type(int id, String symbol) {
             this.id = id;
             this.symbol = symbol;
         }
 
-        // TODO Add Java Doc comments.
+        /**
+         * Object identifier getter.
+         *
+         * @return Identifier.
+         */
         public int id() {
             return id;
         }
 
-        // TODO Add Java Doc comments.
+        /**
+         * Object symbol getter.
+         *
+         * @return String.
+         */
         public String symbol() {
             return symbol;
         }
