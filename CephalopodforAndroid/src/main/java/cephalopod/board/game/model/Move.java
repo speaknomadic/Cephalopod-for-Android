@@ -1,18 +1,36 @@
 package cephalopod.board.game.model;
 
-//TODO Add Java Doc comments.
+/**
+ * Single game move.
+ *
+ */
 public class Move {
 
-    // TODO Add Java Doc comments.
+    /**
+     * X coordinate of the move.
+     */
     private int x;
 
-    // TODO Add Java Doc comments.
+    /**
+     * Y coordinate of the move.
+     */
     private int y;
 
-    // TODO Add Java Doc comments.
+    /**
+     * Is the move valid flag.
+     */
     private boolean valid;
 
-    //TODO Create constructors.
+    /**
+     * Constructor with all parameters.
+     *
+     * @param x
+     *            X coordinate of the move.
+     * @param y
+     *            Y coordinate of the move.
+     * @param valid
+     *            Is the move valid.
+     */
     public Move(int x, int y, boolean valid) {
         super();
 
@@ -21,37 +39,54 @@ public class Move {
         this.valid = valid;
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * @return the x
+     */
     public int getX() {
         return x;
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * Set the x.
+     * @param x
+     */
     public void setX(int x) {
         this.x = x;
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * @return the y
+     */
     public int getY() {
         return y;
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * Set the y.
+     * @param y
+     */
     public void setY(int y) {
         this.y = y;
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * @return the valid
+     */
     public boolean isValid() {
         return valid;
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * Set the valid.
+     * @param valid
+     */
     public void setValid(boolean valid) {
         this.valid = valid;
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -62,7 +97,9 @@ public class Move {
         return result;
     }
 
-    // TODO Add Java Doc comments.
+    /**
+     * {@inheritDoc}
+     */
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
