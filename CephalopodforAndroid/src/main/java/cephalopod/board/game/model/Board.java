@@ -9,19 +9,30 @@ import cephalopod.board.game.model.Cell.Type;
 
 //TODO Add Java Doc comments.
 public class Board {
-    //TODO Add Java Doc comments.
+    /**
+     * Height size in rows.
+     */
     public static final int ROWS = 5;
 
-    //TODO Add Java Doc comments.
+    /**
+     * Width size in columns.
+     */
+
     public static final int COLS = 5;
 
-    //TODO Add Java Doc comments.
+    /**
+     * Innitialize number of turns.
+     */
     private int turn = 0;
 
-    //TODO Add Java Doc comments.
+    /**
+     * Innitialize if the game is over.
+     */
     private boolean gameOver = false;
 
-    //TODO Add Java Doc comments.
+    /**
+     * Innitialize the cells.
+     */
     private Cell cells[][] = initial();
 
     /**
@@ -30,17 +41,28 @@ public class Board {
      * @param original The original object.
      */
     public Board(Board original) {
-        // TODO Create copy constructors.
+        this.gameOver = original.gameOver;
+        this.turn = original.turn;
+        for(int i = 0;i < ROWS && i< original.ROWS;i++){
+            for(int j = 0;j < COLS && j< original.COLS;i++){
+                this.cells[i][j] = original.cells[i][j];
+            }
+        }
     }
 
     /**
      * Constructor withoout parameters.
      */
     public Board() {
+
         super();
     }
 
-    //TODO Add Java Doc comments.
+    /**
+     * Initial board state static factory function.
+     *
+     * @return Initial board state.
+     */
     private static Cell[][] initial() {
         Cell result[][] = {
                 {new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO),
@@ -694,6 +716,8 @@ public class Board {
      * @return Counters with the success of the different players on the board.
      */
     public Map<Type, Integer> score() {
+
+
         Map<Type, Integer> result = new HashMap<Type, Integer>();
 
 		/*
@@ -716,20 +740,31 @@ public class Board {
         return result;
     }
 
-    // TODO Create getters and setters.
+    /**
+
+     * Turn getter.
+     *
+     * @return Turn number.
+     */
     public int getTurn() {
         return turn;
     }
 
-    //TODO Add Java Doc comments.
+    /**
+     * Game over flag getter.
+     *
+     * @return Game over state.
+     */
     public boolean isGameOver() {
         return gameOver;
     }
 
-    //TODO Add Java Doc comments.
+    /**
+     * Game over flag setter.
+     */
     public void setGameOver() {
         gameOver = true;
     }
 
-    // TODO Create equals and hash code methods. - no need of them
+
 }
