@@ -1,10 +1,114 @@
 <?xml version="1.0" encoding="utf-8"?>
-<merger version="3"><dataSet config="main$Generated" generated="true"><source path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res"/><source path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\generated\res\rs\debug"/><source path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug$Generated" generated="true"><source path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\debug\res"/></dataSet><dataSet config="main" generated-set="main$Generated"><source path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res"><file name="blue01" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue01.png" qualifiers="" type="drawable"/><file name="blue02" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue02.png" qualifiers="" type="drawable"/><file name="blue03" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue03.png" qualifiers="" type="drawable"/><file name="blue04" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue04.png" qualifiers="" type="drawable"/><file name="blue05" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue05.png" qualifiers="" type="drawable"/><file name="blue06" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue06.png" qualifiers="" type="drawable"/><file name="dice" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\dice.png" qualifiers="" type="drawable"/><file name="empty" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\empty.png" qualifiers="" type="drawable"/><file name="red01" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red01.png" qualifiers="" type="drawable"/><file name="red02" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red02.png" qualifiers="" type="drawable"/><file name="red03" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red03.png" qualifiers="" type="drawable"/><file name="red04" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red04.png" qualifiers="" type="drawable"/><file name="red05" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red05.png" qualifiers="" type="drawable"/><file name="red06" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red06.png" qualifiers="" type="drawable"/><file name="ic_launcher" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable-hdpi\ic_launcher.png" qualifiers="hdpi-v4" type="drawable"/><file name="ic_launcher" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable-mdpi\ic_launcher.png" qualifiers="mdpi-v4" type="drawable"/><file name="ic_launcher" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable-xhdpi\ic_launcher.png" qualifiers="xhdpi-v4" type="drawable"/><file name="activity_game" path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\layout\activity_game.xml" qualifiers="" type="layout"/><file path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\values\strings.xml" qualifiers=""><string name="hello_world"/><string name="app_name">Cephalopod Board Game</string><string name="title_activity_game">Cephalopod by Mark Steere</string></file><file path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\values\styles.xml" qualifiers=""><style name="AppTheme" parent="AppBaseTheme">
-        
-    </style><style name="AppBaseTheme" parent="android:Theme.Light">
-        
-    </style></file><file path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\values-v11\styles.xml" qualifiers="v11"><style name="AppBaseTheme" parent="android:Theme.Holo.Light">
-        
-    </style></file><file path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\values-v14\styles.xml" qualifiers="v14"><style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
-        
-    </style></file></source><source path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\generated\res\rs\debug"/><source path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\generated\res\resValues\debug"/></dataSet><dataSet config="debug" generated-set="debug$Generated"><source path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\debug\res"/></dataSet><mergedItems/></merger>
+<merger version="3">
+    <dataSet config="main$Generated" generated="true">
+        <source
+            path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res" />
+        <source
+            path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\generated\res\rs\debug" />
+        <source
+            path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\generated\res\resValues\debug" />
+    </dataSet>
+    <dataSet config="debug$Generated" generated="true">
+        <source
+            path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\debug\res" />
+    </dataSet>
+    <dataSet config="main" generated-set="main$Generated">
+        <source
+            path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res">
+            <file name="blue01"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue01.png"
+                qualifiers="" type="drawable" />
+            <file name="blue02"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue02.png"
+                qualifiers="" type="drawable" />
+            <file name="blue03"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue03.png"
+                qualifiers="" type="drawable" />
+            <file name="blue04"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue04.png"
+                qualifiers="" type="drawable" />
+            <file name="blue05"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue05.png"
+                qualifiers="" type="drawable" />
+            <file name="blue06"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\blue06.png"
+                qualifiers="" type="drawable" />
+            <file name="dice"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\dice.png"
+                qualifiers="" type="drawable" />
+            <file name="empty"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\empty.png"
+                qualifiers="" type="drawable" />
+            <file name="red01"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red01.png"
+                qualifiers="" type="drawable" />
+            <file name="red02"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red02.png"
+                qualifiers="" type="drawable" />
+            <file name="red03"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red03.png"
+                qualifiers="" type="drawable" />
+            <file name="red04"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red04.png"
+                qualifiers="" type="drawable" />
+            <file name="red05"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red05.png"
+                qualifiers="" type="drawable" />
+            <file name="red06"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable\red06.png"
+                qualifiers="" type="drawable" />
+            <file name="ic_launcher"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable-hdpi\ic_launcher.png"
+                qualifiers="hdpi-v4" type="drawable" />
+            <file name="ic_launcher"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable-mdpi\ic_launcher.png"
+                qualifiers="mdpi-v4" type="drawable" />
+            <file name="ic_launcher"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\drawable-xhdpi\ic_launcher.png"
+                qualifiers="xhdpi-v4" type="drawable" />
+            <file name="activity_game"
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\layout\activity_game.xml"
+                qualifiers="" type="layout" />
+            <file
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\values\strings.xml"
+                qualifiers="">
+                <string name="hello_world" />
+                <string name="app_name">Cephalopod Board Game</string>
+                <string name="title_activity_game">Cephalopod by Mark Steere</string>
+            </file>
+            <file
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\values\styles.xml"
+                qualifiers="">
+                <style name="AppTheme" parent="AppBaseTheme">
+
+                </style>
+                <style name="AppBaseTheme" parent="android:Theme.Light">
+
+                </style>
+            </file>
+            <file
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\values-v11\styles.xml"
+                qualifiers="v11">
+                <style name="AppBaseTheme" parent="android:Theme.Holo.Light">
+
+                </style>
+            </file>
+            <file
+                path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\main\res\values-v14\styles.xml"
+                qualifiers="v14">
+                <style name="AppBaseTheme" parent="android:Theme.Holo.Light.DarkActionBar">
+
+                </style>
+            </file>
+        </source>
+        <source
+            path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\generated\res\rs\debug" />
+        <source
+            path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\generated\res\resValues\debug" />
+    </dataSet>
+    <dataSet config="debug" generated-set="debug$Generated">
+        <source
+            path="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\src\debug\res" />
+    </dataSet>
+    <mergedItems />
+</merger>
