@@ -2,7 +2,6 @@ package cephalopod.board.game.model;
 
 /**
  * Single game move.
- *
  */
 public class Move {
 
@@ -24,12 +23,9 @@ public class Move {
     /**
      * Constructor with all parameters.
      *
-     * @param x
-     *            X coordinate of the move.
-     * @param y
-     *            Y coordinate of the move.
-     * @param valid
-     *            Is the move valid.
+     * @param x     X coordinate of the move.
+     * @param y     Y coordinate of the move.
+     * @param valid Is the move valid.
      */
     public Move(int x, int y, boolean valid) {
         super();
@@ -48,6 +44,7 @@ public class Move {
 
     /**
      * Set the x.
+     *
      * @param x
      */
     public void setX(int x) {
@@ -63,6 +60,7 @@ public class Move {
 
     /**
      * Set the y.
+     *
      * @param y
      */
     public void setY(int y) {
@@ -78,6 +76,7 @@ public class Move {
 
     /**
      * Set the valid.
+     *
      * @param valid
      */
     public void setValid(boolean valid) {
