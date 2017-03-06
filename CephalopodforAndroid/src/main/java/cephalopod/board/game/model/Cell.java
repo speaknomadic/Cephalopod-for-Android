@@ -4,25 +4,20 @@ package cephalopod.board.game.model;
  * Cell class describes single cell.
  */
 public class Cell {
-
     /**
      * Cell type.
      */
-
     private Type type;
-
     /**
      * Cell size.
      */
     private Size size;
 
     /**
-     * Constructor.
+     * Constructor with parameters.
      *
-     * @param type
-     *            Cell type.
-     * @param size
-     *            Cell size.
+     * @param type Cell type.
+     * @param size Cell size.
      */
     public Cell(Type type, Size size) {
         this.type = type;
@@ -40,7 +35,7 @@ public class Cell {
 
     /**
      * Cell type setter.
-     *
+     * <p>
      * sets Type of the cell.
      */
     public void setType(Type type) {
@@ -58,18 +53,11 @@ public class Cell {
 
     /**
      * Cell size setter.
-     *
+     * <p>
      * sets Size of the cell.
      */
     public void setSize(Size size) {
         this.size = size;
-    }
-
-    /**
-     * shows Type of the cell.
-     */
-    public void showType() {
-        System.out.println(this.getType());
     }
 
     /**
@@ -105,7 +93,7 @@ public class Cell {
     }
 
     /**
-     * Cell size.
+     * Cell size enumeration.
      */
     public enum Size {
         ZERO(0), ONE(1), TWO(2), THREE(3), FOUR(4), FIVE(5), SIX(6);
@@ -118,8 +106,7 @@ public class Cell {
         /**
          * Constructor.
          *
-         * @param id
-         *            Size value of the cell.
+         * @param id Size value of the cell.
          */
         private Size(int id) {
             this.value = id;
@@ -127,8 +114,9 @@ public class Cell {
 
         /**
          * Convert from int to Size.
-         * @param size
-         * @return Size of the cell.
+         *
+         * @param size Numeric size of the cell.
+         * @return Size of the cell as reference.
          */
         public static Size instanceOf(int size) {
             switch (size) {
@@ -153,16 +141,17 @@ public class Cell {
         }
 
         /**
-         * Cell value getter
+         * Cell value getter.
+         *
          * @return value.
          */
-        public int getValue() {
+        public int value() {
             return value;
         }
     }
 
     /**
-     * Cell type.
+     * Cell type enumeration.
      */
     public enum Type {
         EMPTY(0, " "), RED(1, "R"), BLUE(2, "B");
@@ -180,14 +169,36 @@ public class Cell {
         /**
          * Constructor.
          *
-         * @param id
-         *            Object identifier.
-         * @param symbol
-         *            Symbols used in to string printing.
+         * @param id     Numeric identifier.
+         * @param symbol Symbol for string representation.
          */
         private Type(int id, String symbol) {
             this.id = id;
             this.symbol = symbol;
+        }
+
+        /**
+         * Determine who is playing.
+         *
+         * @param turn Number of the turn.
+         * @return Player type.
+         */
+        public static Type play(int turn) {
+            if (turn < 0) {
+                return EMPTY;
+            }
+
+            /*
+             * Minus one is needed because empty type can not play.
+             */
+            switch (turn % (values().length - 1)) {
+                case 0:
+                    return RED;
+                case 1:
+                    return BLUE;
+            }
+
+            return EMPTY;
         }
 
         /**
