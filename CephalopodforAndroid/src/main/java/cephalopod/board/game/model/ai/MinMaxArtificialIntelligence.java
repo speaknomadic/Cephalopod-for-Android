@@ -3,7 +3,9 @@ package cephalopod.board.game.model.ai;
 import cephalopod.board.game.model.Cell;
 import cephalopod.board.game.model.Cell.Type;
 
-//TODO Add Java Doc comments.
+/**
+ * MinMax search logic for the AI.
+ */
 public class MinMaxArtificialIntelligence implements ArtificialIntelligence {
 
     @Override
