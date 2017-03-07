@@ -1,6 +1,8 @@
 package cephalopod.board.game.model.ai;
 
-//TODO Add Java Doc comments.
+/**
+ * Exception for immposible move.
+ */
 @SuppressWarnings("serial")
 public class ImpossibleMoveException extends RuntimeException {
 
