@@ -8,6 +8,7 @@ public class Cell {
      * Cell type.
      */
     private Type type;
+
     /**
      * Cell size.
      */
@@ -35,8 +36,6 @@ public class Cell {
 
     /**
      * Cell type setter.
-     * <p>
-     * sets Type of the cell.
      */
     public void setType(Type type) {
         this.type = type;
@@ -53,8 +52,6 @@ public class Cell {
 
     /**
      * Cell size setter.
-     * <p>
-     * sets Size of the cell.
      */
     public void setSize(Size size) {
         this.size = size;

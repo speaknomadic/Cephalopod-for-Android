@@ -181,7 +181,6 @@ public class Board {
         if (cells[x][y].getType() != Cell.Type.EMPTY) {
             return false;
         }
-
         int neighbours = neighbours(x, y);
         if (neighbours == 0 || neighbours >= CAPTURE_IF_LESS) {
             cells[x][y] = new Cell(Cell.Type.play(turn), Size.ONE);
