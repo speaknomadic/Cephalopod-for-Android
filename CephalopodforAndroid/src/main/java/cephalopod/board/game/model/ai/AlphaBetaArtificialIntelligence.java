@@ -3,7 +3,9 @@ package cephalopod.board.game.model.ai;
 import cephalopod.board.game.model.Cell;
 import cephalopod.board.game.model.Cell.Type;
 
-//TODO Add Java Doc comments.
+/**
+ * AlphaBeta pruning search logic for the AI.
+ */
 public class AlphaBetaArtificialIntelligence implements ArtificialIntelligence {
 
     @Override
