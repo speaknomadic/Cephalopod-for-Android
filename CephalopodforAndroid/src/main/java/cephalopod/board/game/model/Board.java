@@ -72,12 +72,12 @@ public class Board {
         Cell result[][] = {
                 {new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO),
                         new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO)},
-                {new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.RED, Size.FIVE), new Cell(Type.EMPTY, Size.ZERO),
-                        new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO)},
                 {new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO),
                         new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO)},
                 {new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO),
-                        new Cell(Type.BLUE, Size.FIVE), new Cell(Type.EMPTY, Size.ZERO)},
+                        new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO)},
+                {new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO),
+                        new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO)},
                 {new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO),
                         new Cell(Type.EMPTY, Size.ZERO), new Cell(Type.EMPTY, Size.ZERO)},};
 
@@ -176,12 +176,11 @@ public class Board {
      */
     public boolean click(int x, int y) {
         /*
-         * Empty cells can not be clicked.
+         *  Not empty cells can not be clicked.
 		 */
         if (cells[x][y].getType() != Cell.Type.EMPTY) {
             return false;
         }
-
         int neighbours = neighbours(x, y);
         if (neighbours == 0 || neighbours >= CAPTURE_IF_LESS) {
             cells[x][y] = new Cell(Cell.Type.play(turn), Size.ONE);
@@ -292,6 +291,11 @@ public class Board {
      */
     public int getTurn() {
         return turn;
+    }
+
+    //TODO Add Java Doc comments.
+    public Cell[][] getCells() {
+        return cells;
     }
 
     /**

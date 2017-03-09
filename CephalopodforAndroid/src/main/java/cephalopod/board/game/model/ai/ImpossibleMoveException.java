@@ -5,5 +5,4 @@ package cephalopod.board.game.model.ai;
  */
 @SuppressWarnings("serial")
 public class ImpossibleMoveException extends RuntimeException {
-
 }

@@ -5,28 +5,58 @@
       <config />
     </shared>
   </component>
+  <component name="AndroidLogFilters">
+    <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="bf276aa6-cd2f-482a-9965-947b27a44582" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/androidTest/debug/cephalopod/board/game/test/BuildConfig.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/incremental-safeguard/androidTest/debug/tag.txt" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/cache.properties.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileHashes.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshots.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/fileSnapshotsToTreeSnapshotsIndex.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/taskArtifacts/taskArtifacts.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_CephalopodforAndroid_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_CephalopodforAndroid_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.bin" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_CephalopodforAndroid_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_CephalopodforAndroid_compileDebugJavaWithJavac/localClassSetAnalysis/localClassSetAnalysis.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_CephalopodforAndroid_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" afterPath="$PROJECT_DIR$/.gradle/2.14.1/tasks/_CephalopodforAndroid_compileDebugJavaWithJavac/localJarClasspathSnapshot/localJarClasspathSnapshot.lock" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/GameActivity$1.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/GameActivity$1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/GameActivity.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/GameActivity.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/R$id.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/R$id.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/R$string.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/R$string.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/R$style.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/R$style.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/R.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/R.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/Board.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/Board.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/Cell$Size.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/Cell$Size.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/Cell$Type.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/Cell$Type.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/Cell.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/Cell.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/Move.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/Move.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/ai/AlphaBetaArtificialIntelligence.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/ai/AlphaBetaArtificialIntelligence.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/ai/ImpossibleMoveException.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/ai/ImpossibleMoveException.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/ai/MinMaxArtificialIntelligence.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/ai/MinMaxArtificialIntelligence.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/ai/MonteCarloArtificialIntelligence.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/ai/MonteCarloArtificialIntelligence.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/ai/RandomArtificialIntelligence.class" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/classes/debug/cephalopod/board/game/model/ai/RandomArtificialIntelligence.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/res/resources-debug.ap_" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/res/resources-debug.ap_" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/CephalopodforAndroid.iml" afterPath="$PROJECT_DIR$/CephalopodforAndroid/CephalopodforAndroid.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/multi/values-v11.json" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/multi/values-v11.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/multi/values-v14.json" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/multi/values-v14.json" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/generated/source/r/debug/cephalopod/board/game/R.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/generated/source/r/debug/cephalopod/board/game/R.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/multi/values.json" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/multi/values.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/single/drawable-hdpi.json" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/single/drawable-hdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/single/drawable-mdpi.json" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/single/drawable-mdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/single/drawable-xhdpi.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/single/drawable.json" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/single/drawable.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/single/layout.json" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/blame/res/debug/single/layout.json" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/incremental/mergeDebugAndroidTestResources/merger.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/incremental/mergeDebugAndroidTestResources/compile-file-map.properties" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/incremental/mergeDebugResources/compile-file-map.properties" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/incremental/mergeDebugResources/merged.dir/values/values.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/incremental/mergeDebugResources/merger.xml" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/incremental/mergeDebugResources/merger.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/manifests/full/debug/AndroidManifest.xml" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/manifests/full/debug/AndroidManifest.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/res/merged/debug/layout/activity_game.xml" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/res/merged/debug/layout/activity_game.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/res/merged/debug/values/values.xml" afterPath="$PROJECT_DIR$/CephalopodforAndroid/build/intermediates/res/merged/debug/values/values.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Board.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Board.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Cell.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Cell.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Move.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Move.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/AlphaBetaArtificialIntelligence.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/AlphaBetaArtificialIntelligence.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/ArtificialIntelligence.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/ArtificialIntelligence.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/ImpossibleMoveException.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/ImpossibleMoveException.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/MinMaxArtificialIntelligence.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/MinMaxArtificialIntelligence.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/MonteCarloArtificialIntelligence.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/MonteCarloArtificialIntelligence.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/RandomArtificialIntelligence.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/RandomArtificialIntelligence.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/res/values/strings.xml" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/res/values/strings.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" afterPath="$PROJECT_DIR$/build/intermediates/dex-cache/cache.xml" />
     </list>
     <ignored path="Cephalopod-for-Android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -58,7 +88,7 @@
     <favorites_list name="Cephalopod-for-Android" />
   </component>
   <component name="FileEditorManager">
-    <leaf SIDE_TABS_SIZE_LIMIT_KEY="375" />
+    <leaf />
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -1598,12 +1628,18 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java" />
         <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Util.java" />
         <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/res/layout/activity_game.xml" />
+        <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Move.java" />
+        <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/ArtificialIntelligence.java" />
+        <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/ImpossibleMoveException.java" />
+        <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/MinMaxArtificialIntelligence.java" />
+        <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/MonteCarloArtificialIntelligence.java" />
+        <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/RandomArtificialIntelligence.java" />
+        <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/AlphaBetaArtificialIntelligence.java" />
         <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Board.java" />
         <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Cell.java" />
-        <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Move.java" />
+        <option value="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java" />
       </list>
     </option>
   </component>
@@ -1638,6 +1674,11 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="PackagesPane" />
+      <pane id="ProjectPane">
+        <subPane />
+      </pane>
+      <pane id="Scratches" />
       <pane id="AndroidView">
         <subPane>
           <PATH>
@@ -1645,10 +1686,6 @@
               <option name="myItemId" value="Cephalopod-for-Android" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
             </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Gradle Scripts" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidBuildScriptsGroupNode" />
-            </PATH_ELEMENT>
           </PATH>
           <PATH>
             <PATH_ELEMENT>
@@ -1658,77 +1695,10 @@
             <PATH_ELEMENT>
               <option name="myItemId" value="CephalopodforAndroid" />
               <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cephalopod-for-Android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CephalopodforAndroid" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cephalopod-for-Android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CephalopodforAndroid" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Cephalopod-for-Android" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CephalopodforAndroid" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="java" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidSourceTypeNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="game" />
-              <option name="myItemType" value="com.android.tools.idea.navigator.nodes.AndroidPsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="model" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ai" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scratches" />
       <pane id="Scope">
         <subPane subId="Project Files">
           <PATH>
@@ -1739,15 +1709,11 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="ProjectPane">
-        <subPane />
-      </pane>
-      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="android.sdk.path" value="$USER_HOME$/android-sdks" />
-    <property name="device.picker.selection" value="AVD1" />
+    <property name="device.picker.selection" value="192.168.64.101:5555" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
     <property name="settings.editor.splitter.proportion" value="0.2" />
     <property name="android.project.structure.last.selected" value="CephalopodforAndroid" />
@@ -2082,38 +2048,44 @@
       <option name="project" value="LOCAL" />
       <updated>1488710147662</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Some code refactoring was done.">
+      <created>1488824427682</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1488824427682</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
     <frame x="-9" y="-9" width="1938" height="1048" extended-state="6" />
     <editor active="false" />
     <layout>
-      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Nl-Palette" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.49785176" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57444316" sideWeight="0.7540279" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Properties" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Captures" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.20998926" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32942554" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57444316" sideWeight="0.24597207" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21911922" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -2121,6 +2093,7 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32590857" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="Vcs.Log.UiProperties">
@@ -2140,80 +2113,18 @@
     <MESSAGE value="Game screen was created." />
     <MESSAGE value="Code refactoring was done." />
     <MESSAGE value="Some more refactoring was done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some more refactoring was done." />
+    <MESSAGE value="Some code refactoring was done." />
+    <option name="LAST_COMMIT_MESSAGE" value="Some code refactoring was done." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/build.gradle">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/CephalopodforAndroid.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="132">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/layout/activity_game.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#5880#5895#0" expanded="true" />
-            <element signature="e#7010#7025#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2221,7 +2132,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1584">
           <caret line="86" column="36" selection-start-line="86" selection-start-column="28" selection-end-line="86" selection-end-column="36" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2229,7 +2139,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
           <caret line="3" column="13" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2237,7 +2146,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
           <caret line="12" column="20" selection-start-line="12" selection-start-column="20" selection-end-line="12" selection-end-column="20" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2245,7 +2153,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2253,7 +2160,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2261,29 +2167,23 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="8" column="13" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/layout/activity_game.xml">
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
       <provider editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Board.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#5880#5895#0" expanded="true" />
-            <element signature="e#7010#7025#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -2291,64 +2191,50 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/layout/activity_game.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
       <provider selected="true" editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/layout/activity_game.xml">
       <provider editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
           <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/layout/activity_game.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
-          <folding />
+      <provider selected="true" editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="88">
+          <caret line="10" column="13" selection-start-line="10" selection-start-column="13" selection-end-line="10" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/layout/activity_game.xml">
       <provider editor-type-id="android-designer2">
         <state />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        <state relative-caret-position="110">
+          <caret line="5" column="0" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2356,7 +2242,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2364,7 +2249,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -2372,7 +2256,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
         </state>
       </provider>
     </entry>
@@ -2383,47 +2273,26 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/blue04.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/blue05.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/blue06.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/dice.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/empty.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/red01.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/red02.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/build.gradle">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/red03.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/CephalopodforAndroid.iml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/red04.png">
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/blue01.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -2433,118 +2302,164 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/blue01.png">
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/blue03.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/layout/activity_game.xml">
-      <provider editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-      <provider selected="true" editor-type-id="android-designer2">
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/blue04.png">
+      <provider selected="true" editor-type-id="images">
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java">
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/red06.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/red05.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/red04.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/red03.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/red02.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable-hdpi/ic_launcher.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/empty.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/dice.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/blue06.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/drawable/blue05.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/values/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="132">
-          <caret line="10" column="12" selection-start-line="10" selection-start-column="12" selection-end-line="10" selection-end-column="21" />
-          <folding />
+          <caret line="6" column="41" selection-start-line="6" selection-start-column="37" selection-end-line="6" selection-end-column="41" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/build.gradle">
+    <entry file="file://$USER_HOME$/android-sdks/sources/android-25/android/os/Looper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/CephalopodforAndroid.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="12" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="776">
-          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Cell.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="75" column="1" selection-start-line="75" selection-start-column="1" selection-end-line="75" selection-end-column="1" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Board.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="352">
-          <caret line="21" column="7" selection-start-line="21" selection-start-column="7" selection-end-line="21" selection-end-column="7" />
-          <folding>
-            <element signature="e#5880#5895#0" expanded="true" />
-            <element signature="e#7010#7025#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="179">
+          <caret line="147" column="0" selection-start-line="147" selection-start-column="0" selection-end-line="147" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/AlphaBetaArtificialIntelligence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/ArtificialIntelligence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/ImpossibleMoveException.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/MinMaxArtificialIntelligence.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="286">
+          <caret line="14" column="0" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/MonteCarloArtificialIntelligence.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="110">
-          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
-          <folding />
+        <state relative-caret-position="220">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/MinMaxArtificialIntelligence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/ImpossibleMoveException.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/ArtificialIntelligence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="10" column="17" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/res/layout/activity_game.xml">
+      <provider editor-type-id="android-designer2">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-4899">
+          <caret line="4" column="0" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/ai/RandomArtificialIntelligence.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="23" column="26" selection-start-line="23" selection-start-column="26" selection-end-line="23" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/GameActivity.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2026">
+          <caret line="33" column="22" selection-start-line="33" selection-start-column="21" selection-end-line="33" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="374">
+          <caret line="17" column="1" selection-start-line="17" selection-start-column="1" selection-end-line="17" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="22">
+          <caret line="50" column="0" selection-start-line="50" selection-start-column="0" selection-end-line="50" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Cell.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="728">
+          <caret line="176" column="11" selection-start-line="176" selection-start-column="11" selection-end-line="176" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/model/Board.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2813">
+          <caret line="287" column="19" selection-start-line="287" selection-start-column="19" selection-end-line="287" selection-end-column="19" />
         </state>
       </provider>
     </entry>

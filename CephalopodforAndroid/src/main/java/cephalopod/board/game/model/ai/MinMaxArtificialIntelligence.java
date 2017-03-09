@@ -8,6 +8,7 @@ import cephalopod.board.game.model.Cell.Type;
  */
 public class MinMaxArtificialIntelligence implements ArtificialIntelligence {
 
+    //TODO Add Java Doc comments.
     @Override
     public int[] move(Cell[][] cells, Type player) throws ImpossibleMoveException {
         //TODO Implement min-max search logic: https://en.wikipedia.org/wiki/Minimax

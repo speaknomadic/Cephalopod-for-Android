@@ -8,6 +8,7 @@ public class Cell {
      * Cell type.
      */
     private Type type;
+
     /**
      * Cell size.
      */
@@ -35,8 +36,6 @@ public class Cell {
 
     /**
      * Cell type setter.
-     * <p>
-     * sets Type of the cell.
      */
     public void setType(Type type) {
         this.type = type;
@@ -53,8 +52,6 @@ public class Cell {
 
     /**
      * Cell size setter.
-     * <p>
-     * sets Size of the cell.
      */
     public void setSize(Size size) {
         this.size = size;
@@ -154,7 +151,7 @@ public class Cell {
      * Cell type enumeration.
      */
     public enum Type {
-        EMPTY(0, " "), RED(1, "R"), BLUE(2, "B");
+        EMPTY(-1, " "), RED(1, "R"), BLUE(2, "B");
 
         /**
          * Size value of the cell.
@@ -166,15 +163,15 @@ public class Cell {
          */
         private String symbol = "";
 
-        /**
-         * Constructor.
-         *
-         * @param id     Numeric identifier.
-         * @param symbol Symbol for string representation.
-         */
-        private Type(int id, String symbol) {
-            this.id = id;
-            this.symbol = symbol;
+        //TODO Add Java Doc comments.
+
+        public static Type instanceOf(int id) {
+            for (Type type : Type.values()) {
+                if (type.id() == id) {
+                    return type;
+                }
+            }
+            return EMPTY;
         }
 
         /**
@@ -199,6 +196,17 @@ public class Cell {
             }
 
             return EMPTY;
+        }
+
+        /**
+         * Constructor.
+         *
+         * @param id     Numeric identifier.
+         * @param symbol Symbol for string representation.
+         */
+        private Type(int id, String symbol) {
+            this.id = id;
+            this.symbol = symbol;
         }
 
         /**
