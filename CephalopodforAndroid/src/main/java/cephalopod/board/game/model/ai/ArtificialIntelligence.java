@@ -7,5 +7,6 @@ import cephalopod.board.game.model.Cell;
  */
 public interface ArtificialIntelligence {
 
+    //TODO Add Java Doc comments.
     public int[] move(Cell cells[][], Cell.Type player) throws ImpossibleMoveException;
 }

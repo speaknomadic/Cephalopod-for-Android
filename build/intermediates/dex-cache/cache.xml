@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="ce1f8957816a142d19a3b9296929f29d1a6f5b38">
+        sha1="0a6be7ec6c8e1b52404d8c76ea76533ac9333145">
         <dex dex="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_21b18c043d437e693c7f3073dcd73187298ea9f5\classes.dex" />
     </item>
     <item
@@ -16,7 +16,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="b48b89e45f9459c54feedc97c48cf7fd17f602d7">
+        sha1="0d271ca9598887daff604ed3c2d8914eb0e0d528">
         <dex dex="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_f0cf3179240624fd4c343065001bc15d54198ca9\classes.dex" />
     </item>
 

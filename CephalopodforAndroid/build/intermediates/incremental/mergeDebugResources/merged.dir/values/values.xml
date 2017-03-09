@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">Cephalopod Board Game</string>
+    <string name="game_over_message">Game over!</string>
     <string name="hello_world"/>
     <string name="title_activity_game">Cephalopod by Mark Steere</string>
     <style name="AppBaseTheme" parent="android:Theme.Light">

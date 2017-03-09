@@ -15,9 +15,9 @@
                     "position": {
                         "startLine": 4,
                         "startColumn": 4,
-                        "startOffset": 99,
+                        "startOffset": 101,
                         "endColumn": 58,
-                        "endOffset": 153
+                        "endOffset": 155
                     }
                 }
             },
@@ -26,17 +26,17 @@
                     "startLine": 3,
                     "startColumn": 4,
                     "startOffset": 114,
-                    "endColumn": 32,
-                    "endOffset": 142
+                    "endColumn": 56,
+                    "endOffset": 166
                 },
                 "from": {
                     "file": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 3,
+                        "startLine": 6,
                         "startColumn": 4,
-                        "startOffset": 58,
-                        "endColumn": 40,
-                        "endOffset": 94
+                        "startOffset": 236,
+                        "endColumn": 56,
+                        "endOffset": 288
                     }
                 }
             },
@@ -44,18 +44,18 @@
                 "to": {
                     "startLine": 4,
                     "startColumn": 4,
-                    "startOffset": 147,
-                    "endColumn": 73,
-                    "endOffset": 216
+                    "startOffset": 171,
+                    "endColumn": 32,
+                    "endOffset": 199
                 },
                 "from": {
                     "file": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\src\\main\\res\\values\\strings.xml",
                     "position": {
-                        "startLine": 5,
+                        "startLine": 3,
                         "startColumn": 4,
-                        "startOffset": 159,
-                        "endColumn": 73,
-                        "endOffset": 228
+                        "startOffset": 59,
+                        "endColumn": 40,
+                        "endOffset": 95
                     }
                 }
             },
@@ -63,10 +63,29 @@
                 "to": {
                     "startLine": 5,
                     "startColumn": 4,
-                    "startOffset": 221,
-                    "endLine": 11,
+                    "startOffset": 204,
+                    "endColumn": 73,
+                    "endOffset": 273
+                },
+                "from": {
+                    "file": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\src\\main\\res\\values\\strings.xml",
+                    "position": {
+                        "startLine": 5,
+                        "startColumn": 4,
+                        "startOffset": 161,
+                        "endColumn": 73,
+                        "endOffset": 230
+                    }
+                }
+            },
+            {
+                "to": {
+                    "startLine": 6,
+                    "startColumn": 4,
+                    "startOffset": 278,
+                    "endLine": 12,
                     "endColumn": 12,
-                    "endOffset": 507
+                    "endOffset": 564
                 },
                 "from": {
                     "file": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\src\\main\\res\\values\\styles.xml",
@@ -82,12 +101,12 @@
             },
             {
                 "to": {
-                    "startLine": 12,
+                    "startLine": 13,
                     "startColumn": 4,
-                    "startOffset": 512,
-                    "endLine": 14,
+                    "startOffset": 569,
+                    "endLine": 15,
                     "endColumn": 12,
-                    "endOffset": 667
+                    "endOffset": 724
                 },
                 "from": {
                     "file": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\src\\main\\res\\values\\styles.xml",
