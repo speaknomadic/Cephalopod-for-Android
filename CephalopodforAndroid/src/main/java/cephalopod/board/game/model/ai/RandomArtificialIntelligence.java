@@ -21,7 +21,9 @@ public class RandomArtificialIntelligence implements ArtificialIntelligence {
             y = Util.PRNG.nextInt(cells[x].length);
         } while (cells[x][y].getType() != Type.EMPTY);
 
-        return new int[] { x, y };
+        return new int[] {
+
+        };
 		/*
          * Return x and y of the move as two cells 1D array.
 		 */

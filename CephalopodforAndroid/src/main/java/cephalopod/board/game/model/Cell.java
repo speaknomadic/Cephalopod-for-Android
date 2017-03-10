@@ -151,7 +151,7 @@ public class Cell {
      * Cell type enumeration.
      */
     public enum Type {
-        EMPTY(-1, " "), RED(1, "R"), BLUE(2, "B");
+        EMPTY(0, " "), RED(1, "R"), BLUE(2, "B");
 
         /**
          * Size value of the cell.
