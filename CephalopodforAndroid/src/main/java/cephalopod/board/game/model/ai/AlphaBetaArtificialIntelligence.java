@@ -8,10 +8,19 @@ import cephalopod.board.game.model.Cell.Type;
  */
 public class AlphaBetaArtificialIntelligence implements ArtificialIntelligence {
 
-    //TODO Add Java Doc comments.
+    /**
+     * Generate bot`s move
+     * @param cells - the board
+     * @param player - type of the player
+     * @return
+     * @throws ImpossibleMoveException
+     */
     @Override
     public int[] move( Cell[][] cells , Type player) throws ImpossibleMoveException {
-        //TODO Implement alpha–beta pruning search logic: https://en.wikipedia.org/wiki/Alpha%E2%80%93beta_pruning
+        /**
+         * It stops completely evaluating a move when at least one possibility has been found
+         * that proves the move to be worse than a previously examined move.
+         */
 
 		/*
          * Return x and y of the move as two cells 1D array.
