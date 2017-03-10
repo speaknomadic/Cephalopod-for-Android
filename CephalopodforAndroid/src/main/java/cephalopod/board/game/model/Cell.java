@@ -163,8 +163,11 @@ public class Cell {
          */
         private String symbol = "";
 
-        //TODO Add Java Doc comments.
-
+        /**
+         * Factory for type converts from int to Type.
+         *
+         //* @param size Numeric id of the type of cell.
+         * @return Type of the cell as reference. */
         public static Type instanceOf(int id) {
             for (Type type : Type.values()) {
                 if (type.id() == id) {
