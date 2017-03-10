@@ -14,25 +14,43 @@ import cephalopod.board.game.model.Cell;
 import cephalopod.board.game.model.ai.ArtificialIntelligence;
 import cephalopod.board.game.model.ai.RandomArtificialIntelligence;
 
-//TODO Add Java Doc comments.
+/**
+ * Game screen.
+ *
+ */
 public class GameActivity extends Activity {
 
-    //TODO Add Java Doc comments.
+    /**
+     * Handler instance associated with the bot thread
+     *
+     */
+
     private final Handler handler = new Handler();
 
-    //TODO Add Java Doc comments.
+    /**
+     * Sounds pool instance to manage and play audio resources
+     */
     private SoundPool sounds = null;
 
-    //TODO Add Java Doc comments.
+    /**
+     * Click sound identifier  – id used as first argument in play() method, when button is clicked. The SoundPool plays it when a human makes a valid click.
+     */
     private int clickId = -1;
 
-    //TODO Add Java Doc comments.
+    /**
+     * Finish sound identifier – id used as first argument in play() method. The SoundPool plays it when the game is over.
+     */
     private int finishId = -1;
 
-    //TODO Add Java Doc comments.
+    /**
+     * Computer opponent bot thread. Anonymous class which implements Runnable()
+     */
 
     private Runnable ai = new Runnable() {
-        //TODO Add Java Doc comments.
+
+        /**
+         * Computer opponent object instance (executed by a thread). Bot's reference is of ArtificialIntelligence Interface type, bot's instance is of RandomArtificialIntelligence Interface type. Bot reference executes move method overriden in the RandomArtificialIntelligence Interface.
+         */
         private ArtificialIntelligence bot = new RandomArtificialIntelligence();
 
         /**
@@ -41,7 +59,7 @@ public class GameActivity extends Activity {
         @Override
         public void run() {
 			/*
-			 * If the game is over there is no need to play.
+			 * If the game is over there is no need bot to play.
 			 */
             if (board.isGameOver() == true) {
                 return;
@@ -55,13 +73,13 @@ public class GameActivity extends Activity {
             }
 
 			/*
-			 * Generate move.
-			 */
+             * Bot generates move.The int array move contains coordinates x and y of the bot's move.
+             */
             int move[] = bot.move(board.getCells(), Cell.Type.play(board.getTurn()% 2));
 
 			/*
-			 * Play move.
-			 */
+             * Play bot's move.
+             */
             boolean result = board.click(move[0], move[1]);
             if (result == true) {
                 if (board.hasWinner() == true) {
@@ -73,14 +91,21 @@ public class GameActivity extends Activity {
         }
     };
 
-    //TODO Add Java Doc comments.
+    /**
+     * An instance of a board object.
+     *
+     */
     private Board board = new Board();
 
-    //TODO Add Java Doc comments.
+    /**
+     * Keep references to all image view components.
+     */
     private ImageView images[][] = {{null, null, null, null, null}, {null, null, null, null, null},
             {null, null, null, null, null}, {null, null, null, null, null}, {null, null, null, null, null},};
 
-    //TODO Add Java Doc comments.
+    /**
+     * Cells click listener. Checks if game is over. Checks if computer bot is on turn.
+     */
     private View.OnClickListener click = new View.OnClickListener() {
         //TODO Add Java Doc comments.
         @Override
@@ -134,7 +159,9 @@ public class GameActivity extends Activity {
         }
     };
 
-    //TODO Add Java Doc comments.
+    /**
+     * Update all visual controls.
+     */
     private void updateViews() {
 		/*
 		 * Play sound for game over.

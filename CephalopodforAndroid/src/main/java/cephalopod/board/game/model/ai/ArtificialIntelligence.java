@@ -7,6 +7,12 @@ import cephalopod.board.game.model.Cell;
  */
 public interface ArtificialIntelligence {
 
-    //TODO Add Java Doc comments.
+    /**
+     * Generate bot`s move
+     * @param cells - the board
+     * @param player - type of the player
+     * @return
+     * @throws ImpossibleMoveException
+     */
     public int[] move(Cell cells[][], Cell.Type player) throws ImpossibleMoveException;
 }

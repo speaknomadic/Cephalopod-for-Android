@@ -6,7 +6,10 @@ import java.util.Map;
 import cephalopod.board.game.model.Cell.Size;
 import cephalopod.board.game.model.Cell.Type;
 
-//TODO Add Java Doc comments.
+/**
+ * Board class which instantiates a board object. The board contains all cells and methods to play the game. The board object is instantiated in the GameActivity to connect methods from GUI and logic.
+ *
+ */
 public class Board {
     /**
      * Height size in rows.
@@ -293,7 +296,11 @@ public class Board {
         return turn;
     }
 
-    //TODO Add Java Doc comments.
+    /**
+     * Cell matrix getter.
+     *
+     * @returns the state of all cells in the board.
+     */
     public Cell[][] getCells() {
         return cells;
     }
