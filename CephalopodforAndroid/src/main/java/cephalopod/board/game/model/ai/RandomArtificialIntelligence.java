@@ -9,10 +9,18 @@ import cephalopod.board.game.model.Util;
  */
 public class RandomArtificialIntelligence implements ArtificialIntelligence {
 
-    //TODO Add Java Doc comments.
+    /**
+     * Generate bot`s move
+     * @param cells - the board
+     * @param player - type of the player
+     * @return
+     * @throws ImpossibleMoveException
+     */
     @Override
     public int[] move(Cell[][] cells, Type player) throws ImpossibleMoveException {
-        //TODO Implement random search logic: https://en.wikipedia.org/wiki/Random_search
+        /**
+         * Generate random move for the bot.
+         */
 
         int x = -1;
         int y = -1;

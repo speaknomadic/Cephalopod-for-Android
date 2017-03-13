@@ -40,7 +40,7 @@ public class GameActivity extends Activity {
          */
         @Override
         public void run() {
-            /*
+			/*
 			 * If the game is over there is no need to play.
 			 */
             if (board.isGameOver() == true) {
@@ -57,7 +57,7 @@ public class GameActivity extends Activity {
 			/*
 			 * Generate move.
 			 */
-            int move[] = bot.move(board.getCells(), Cell.Type.play(board.getTurn() % 2));
+            int move[] = bot.move(board.getCells(), Cell.Type.play(board.getTurn()% 2));
 
 			/*
 			 * Play move.
@@ -85,7 +85,7 @@ public class GameActivity extends Activity {
         //TODO Add Java Doc comments.
         @Override
         public void onClick(View view) {
-            /*
+/*
              * If the game is over there is nothing bot can do.
 			 */
             if (board.isGameOver() == true) {
@@ -130,6 +130,7 @@ public class GameActivity extends Activity {
 			 * Update user interface.
 			 */
             updateViews();
+
         }
     };
 
@@ -280,5 +281,4 @@ public class GameActivity extends Activity {
         super.onDestroy();
         sounds.release();
         sounds = null;
-    }
-}
+    }}
