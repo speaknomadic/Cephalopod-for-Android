@@ -4,12 +4,12 @@
         "source": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\src\\main\\res\\drawable\\blue02.png"
     },
     {
-        "merged": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\blue05.png",
-        "source": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\src\\main\\res\\drawable\\blue05.png"
-    },
-    {
         "merged": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\dice.png",
         "source": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\src\\main\\res\\drawable\\dice.png"
+    },
+    {
+        "merged": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\blue05.png",
+        "source": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\src\\main\\res\\drawable\\blue05.png"
     },
     {
         "merged": "C:\\Users\\silva\\Desktop\\Cephalopod-for-Android\\CephalopodforAndroid\\build\\intermediates\\res\\merged\\debug\\drawable\\red02.png",

@@ -25,7 +25,6 @@ public class RandomArtificialIntelligence implements ArtificialIntelligence {
 		/*
          * Return x and y of the move as two cells 1D array.
 		 */
-        //return new int[]{};
     }
 
 }
