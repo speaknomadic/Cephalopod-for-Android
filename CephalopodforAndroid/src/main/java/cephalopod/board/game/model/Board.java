@@ -177,7 +177,7 @@ public class Board {
      * @param y Y coordinate.
      * @return True if the click was valid move, false otherwise.
      */
-    public boolean click(int x, int y) {
+    public synchronized boolean click(int x, int y) {
         /*
          *  Not empty cells can not be clicked.
 		 */
