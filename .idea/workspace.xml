@@ -9,11 +9,9 @@
     <option name="TOOL_WINDOW_CONFIGURED_FILTER" value="Show only selected application" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="bf276aa6-cd2f-482a-9965-947b27a44582" name="Default" comment="">
+    <list default="true" id="bf276aa6-cd2f-482a-9965-947b27a44582" name="Default" comment="Comments were added.">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/DbAdapter.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/DbAdapter.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/LoginActivity.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/LoginActivity.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/Message.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/Message.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/SignUpActivity.java" afterPath="$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/SignUpActivity.java" />
     </list>
     <ignored path="Cephalopod-for-Android.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -75,11 +73,11 @@
       <file leaf-file-name="DbAdapter.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/DbAdapter.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1113">
-              <caret line="165" column="55" selection-start-line="165" selection-start-column="55" selection-end-line="165" selection-end-column="55" />
+            <state relative-caret-position="401">
+              <caret line="215" column="109" selection-start-line="215" selection-start-column="109" selection-end-line="215" selection-end-column="109" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#726#727#0" expanded="true" />
+                <element signature="e#5555#5556#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -2475,7 +2473,7 @@
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.015294118" sideWeight="0.5021552" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.049411766" sideWeight="0.5021552" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Android Monitor" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.2529412" sideWeight="0.7540279" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32975295" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.0" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -2485,7 +2483,7 @@
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.57444316" sideWeight="0.24597207" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.28448275" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.015294118" sideWeight="0.49784482" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.049411766" sideWeight="0.49784482" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3297414" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Android Model" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="true" content_ui="tabs" />
@@ -2522,7 +2520,8 @@
     <MESSAGE value="Code refactoring was done." />
     <MESSAGE value="Some more refactoring was done." />
     <MESSAGE value="Some code refactoring was done." />
-    <option name="LAST_COMMIT_MESSAGE" value="Some code refactoring was done." />
+    <MESSAGE value="Comments were added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments were added." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -2891,11 +2890,11 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CephalopodforAndroid/src/main/java/cephalopod/board/game/DbAdapter.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1113">
-          <caret line="165" column="55" selection-start-line="165" selection-start-column="55" selection-end-line="165" selection-end-column="55" />
+        <state relative-caret-position="401">
+          <caret line="215" column="109" selection-start-line="215" selection-start-column="109" selection-end-line="215" selection-end-column="109" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#726#727#0" expanded="true" />
+            <element signature="e#5555#5556#0" expanded="true" />
           </folding>
         </state>
       </provider>
