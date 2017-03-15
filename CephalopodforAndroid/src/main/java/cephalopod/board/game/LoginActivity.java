@@ -9,15 +9,48 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ *
+ */
 public class LoginActivity extends AppCompatActivity {
-
+    /**
+     *
+     */
     private Button login;
+
+    /**
+     *
+     */
     private Button signUp;
+
+    /**
+     *
+     */
     private TextView username;
+
+    /**
+     *
+     */
     private TextView password;
+
+    /**
+     *
+     */
     private EditText usernameInsert;
+
+    /**
+     *
+     */
     private EditText passwordInsert;
+
+    /**
+     *
+     */
     private DbAdapter db;
+
+    /**
+     *
+     */
     private Session session;
 
     @Override
@@ -49,16 +82,17 @@ public class LoginActivity extends AppCompatActivity {
         password = (TextView)findViewById(R.id.password_text);
         usernameInsert = (EditText)findViewById(R.id.username_insert);
         passwordInsert = (EditText)findViewById(R.id.password_insert);
-
         login.setOnClickListener(listener);
         signUp.setOnClickListener(listener);
 
         if(session.loggedIn()){
-
            // Toast.makeText(this, "Logged in", Toast.LENGTH_SHORT).show();
         }
     }
 
+    /**
+     *
+     */
    private void logIn(){
         String username = usernameInsert.getText().toString();
         String pass = passwordInsert.getText().toString();
