@@ -1,8 +1,8 @@
 package cephalopod.board.game;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -64,7 +64,7 @@ public class LoginActivity extends AppCompatActivity {
         String pass = passwordInsert.getText().toString();
         if(db.getUser(username,pass)){
             session.setLoggedin(true);
-
+            startActivity(new Intent(LoginActivity.this,GameActivity.class));
             Toast.makeText(this, "User Logged in", Toast.LENGTH_SHORT).show();
 
         }
