@@ -66,7 +66,6 @@ public class LoginActivity extends AppCompatActivity {
             session.setLoggedin(true);
             startActivity(new Intent(LoginActivity.this,GameActivity.class));
             Toast.makeText(this, "User Logged in", Toast.LENGTH_SHORT).show();
-
         }
         else{
             Toast.makeText(this, "Wrong username/password!", Toast.LENGTH_SHORT).show();
