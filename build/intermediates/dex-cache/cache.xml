@@ -3,12 +3,30 @@
 
     <item
         is-multidex="true"
+        jar="C:\Users\silva\.android\build-cache\f3f49a5484cc767a93344746cc54484b3f8a2f01\output\jars\classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="44ee06abb66da30f5855e6bf54574e64cdcd982a">
+        <dex dex="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\10\classes_e93f90651bbe85f6a9c082fa7dc5bfe085bd4e1b\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
+        jar="C:\Users\silva\android-sdks\extras\m2repository\com\android\support\constraint\constraint-layout-solver\1.0.2\constraint-layout-solver-1.0.2.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.2"
+        sha1="b9cd8fc6bd15cb915735d34535db30ece0c44603">
+        <dex dex="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\10\constraint-layout-solver-1.0.2_bd4c1e6b889608552479a55a9c27307ac5821d52\classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\incremental-classes\debug\instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="0a6be7ec6c8e1b52404d8c76ea76533ac9333145">
-        <dex dex="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run-bootstrap_21b18c043d437e693c7f3073dcd73187298ea9f5\classes.dex" />
+        sha1="83fc635be3088bb659bb481bbacc8eba1dbfe26f">
+        <dex dex="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run-bootstrap_21b18c043d437e693c7f3073dcd73187298ea9f5\classes.dex" />
     </item>
     <item
         is-multidex="true"
@@ -16,8 +34,8 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.2"
-        sha1="0d271ca9598887daff604ed3c2d8914eb0e0d528">
-        <dex dex="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\10\instant-run_f0cf3179240624fd4c343065001bc15d54198ca9\classes.dex" />
+        sha1="c82741bc129dd5f99f11a4ab8666ae24262053b6">
+        <dex dex="C:\Users\silva\Desktop\Cephalopod-for-Android\CephalopodforAndroid\build\intermediates\transforms\dex\debug\folders\1000\10000\instant-run_f0cf3179240624fd4c343065001bc15d54198ca9\classes.dex" />
     </item>
 
 </items>
