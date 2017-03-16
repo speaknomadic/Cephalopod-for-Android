@@ -1,10 +1,14 @@
 package cephalopod.board.game;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.Toast;
@@ -16,41 +20,28 @@ import cephalopod.board.game.model.ai.RandomArtificialIntelligence;
 
 /**
  * Game screen.
- *
  */
 public class GameActivity extends Activity {
 
     /**
      * Handler instance associated with the bot thread
-     *
      */
 
     private final Handler handler = new Handler();
 
-    /**
-     * Sounds pool instance to manage and play audio resources
-     */
+    //TODO Add Java Doc comments.
     private SoundPool sounds = null;
 
-    /**
-     * Click sound identifier  – id used as first argument in play() method, when button is clicked. The SoundPool plays it when a human makes a valid click.
-     */
+    //TODO Add Java Doc comments.
     private int clickId = -1;
 
-    /**
-     * Finish sound identifier – id used as first argument in play() method. The SoundPool plays it when the game is over.
-     */
+    //TODO Add Java Doc comments.
     private int finishId = -1;
 
-    /**
-     * Computer opponent bot thread. Anonymous class which implements Runnable()
-     */
+    //TODO Add Java Doc comments.
 
     private Runnable ai = new Runnable() {
-
-        /**
-         * Computer opponent object instance (executed by a thread). Bot's reference is of ArtificialIntelligence Interface type, bot's instance is of RandomArtificialIntelligence Interface type. Bot reference executes move method overriden in the RandomArtificialIntelligence Interface.
-         */
+        //TODO Add Java Doc comments.
         private ArtificialIntelligence bot = new RandomArtificialIntelligence();
 
         /**
@@ -58,15 +49,15 @@ public class GameActivity extends Activity {
          */
         @Override
         public void run() {
-			/*
-			 * If the game is over there is no need bot to play.
+            /*
+             * If the game is over there is no need bot to play.
 			 */
             if (board.isGameOver() == true) {
                 return;
             }
 
 			/*
-			 * Valid turn check. The bot is always second.
+             * Valid turn check. The bot is always second.
 			 */
             if (board.getTurn() % 2 != 1) {
                 return;
@@ -75,11 +66,11 @@ public class GameActivity extends Activity {
 			/*
              * Bot generates move.The int array move contains coordinates x and y of the bot's move.
              */
-            int move[] = bot.move(board.getCells(), Cell.Type.play(board.getTurn()% 2));
+            int move[] = bot.move(board.getCells(), Cell.Type.play(board.getTurn() % 2));
 
 			/*
-             * Play bot's move.
-             */
+			 * Play move.
+			 */
             boolean result = board.click(move[0], move[1]);
             if (result == true) {
                 if (board.hasWinner() == true) {
@@ -93,19 +84,14 @@ public class GameActivity extends Activity {
 
     /**
      * An instance of a board object.
-     *
      */
     private Board board = new Board();
 
-    /**
-     * Keep references to all image view components.
-     */
+    //TODO Add Java Doc comments.
     private ImageView images[][] = {{null, null, null, null, null}, {null, null, null, null, null},
             {null, null, null, null, null}, {null, null, null, null, null}, {null, null, null, null, null},};
 
-    /**
-     * Cells click listener. Checks if game is over. Checks if computer bot is on turn.
-     */
+    //TODO Add Java Doc comments.
     private View.OnClickListener click = new View.OnClickListener() {
         //TODO Add Java Doc comments.
         @Override
@@ -118,14 +104,14 @@ public class GameActivity extends Activity {
             }
 
 			/*
-			 * If the human player has turn also nothing to be done.
+             * If the human player has turn also nothing to be done.
 			 */
             if (board.getTurn() % 2 != 0) {
                 return;
             }
 
 			/*
-			 * Play a human move.
+             * Play a human move.
 			 */
             boolean result = false;
             loops:
@@ -139,7 +125,7 @@ public class GameActivity extends Activity {
             }
 
 			/*
-			 * Check for winner.
+             * Check for winner.
 			 */
             if (result == true) {
                 if (board.hasWinner() == true) {
@@ -152,26 +138,24 @@ public class GameActivity extends Activity {
             }
 
 			/*
-			 * Update user interface.
+             * Update user interface.
 			 */
             updateViews();
 
         }
     };
 
-    /**
-     * Update all visual controls.
-     */
+    //TODO Add Java Doc comments.
     private void updateViews() {
-		/*
-		 * Play sound for game over.
+        /*
+         * Play sound for game over.
 		 */
         if (board.isGameOver() == true) {
             sounds.play(finishId, 0.99f, 0.99f, 0, 0, 1);
         }
 
 		/*
-		 * Redraw all cells.
+         * Redraw all cells.
 		 */
         Cell cells[][] = board.getCells();
         for (int i = 0; i < cells.length && i < images.length; i++) {
@@ -308,4 +292,41 @@ public class GameActivity extends Activity {
         super.onDestroy();
         sounds.release();
         sounds = null;
-    }}
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        /**
+         * Inflate menu xml file, using instance of object inflater
+         */
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.game_option_menu, menu);
+        return true;
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        /**
+         * Handle item selection
+         */
+        switch (item.getItemId()) {
+            case R.id.settings:
+                startActivity(new Intent(GameActivity.this, SettingsActivity.class));
+                return true;
+            case R.id.rules:
+                startActivity(new Intent(GameActivity.this, RulesActivity.class));
+                return true;
+            case R.id.about:
+                startActivity(new Intent(GameActivity.this, AboutActivity.class));
+                return true;
+            default:
+                return super.onOptionsItemSelected(item);
+        }
+    }
+}

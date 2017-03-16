@@ -1,5 +1,12 @@
 package cephalopod.board.game.model;
 
+import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
+import java.io.Serializable;
+import java.io.StreamCorruptedException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -8,9 +15,8 @@ import cephalopod.board.game.model.Cell.Type;
 
 /**
  * Board class which instantiates a board object. The board contains all cells and methods to play the game. The board object is instantiated in the GameActivity to connect methods from GUI and logic.
- *
  */
-public class Board {
+public class Board implements Serializable {
     /**
      * Height size in rows.
      */
@@ -184,6 +190,7 @@ public class Board {
         if (cells[x][y].getType() != Cell.Type.EMPTY) {
             return false;
         }
+
         int neighbours = neighbours(x, y);
         if (neighbours == 0 || neighbours >= CAPTURE_IF_LESS) {
             cells[x][y] = new Cell(Cell.Type.play(turn), Size.ONE);
@@ -326,5 +333,59 @@ public class Board {
      */
     public void next() {
         turn++;
+    }
+
+    /**
+     * Convert board to bytes array.
+     *
+     * @return The game board as bites.
+     */
+    public byte[] toBytes() {
+        byte bytes[] = {};
+        ByteArrayOutputStream out = null;
+        try {
+            (new ObjectOutputStream(out = new ByteArrayOutputStream())).writeObject(this);
+            out.flush();
+            bytes = out.toByteArray();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                out.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        return bytes;
+    }
+
+    /**
+     * Convert bytes to a board object.
+     *
+     * @param bytes Array of bytes representing a board.
+     */
+
+    public void fromBytes(byte[] bytes) {
+        Board board = this;
+        ObjectInputStream in = null;
+        try {
+            in = new ObjectInputStream(new ByteArrayInputStream(bytes));
+            board = (Board) in.readObject();
+        } catch (StreamCorruptedException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        } catch (ClassNotFoundException e) {
+            e.printStackTrace();
+        } finally {
+            try {
+                in.close();
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+        }
+        this.turn = board.turn;
+        this.gameOver = board.gameOver;
+        this.cells = board.cells;
     }
 }

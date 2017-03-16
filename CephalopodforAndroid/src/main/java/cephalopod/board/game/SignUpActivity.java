@@ -1,28 +1,53 @@
 package cephalopod.board.game;
 
 import android.content.Intent;
-import android.database.sqlite.SQLiteDatabase;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
+/**
+ *
+ */
 public class SignUpActivity extends AppCompatActivity {
-
+    /**
+     *
+     */
     private TextView userName;
+    /**
+     *
+     */
     private TextView password;
+    /**
+     *
+     */
     private TextView confirmPass;
-
+    /**
+     *
+     */
     private EditText usernameInsert;
+    /**
+     *
+     */
     private EditText passInsert;
+    /**
+     *
+     */
     private EditText confirmPassInsert;
-
+    /**
+     *
+     */
     private Button signUp;
+    /**
+     *
+     */
     private Button logIn;
 
+    /**
+     *
+     */
     private DbAdapter dbhelper;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -53,9 +78,10 @@ public class SignUpActivity extends AppCompatActivity {
         logIn.setOnClickListener(listener);
     }
 
-
+    /**
+     *
+     */
     public void addUser(){
-
         String username = usernameInsert.getText().toString();
         String pass = passInsert.getText().toString();
         String confirm = confirmPassInsert.getText().toString();
@@ -68,8 +94,6 @@ public class SignUpActivity extends AppCompatActivity {
             Message.message(this,"User Registered");
             startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
         }
-
     }
-
 }
 

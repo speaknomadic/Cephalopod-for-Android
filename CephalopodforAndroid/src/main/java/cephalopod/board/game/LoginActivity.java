@@ -1,23 +1,56 @@
 package cephalopod.board.game;
 
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+/**
+ *
+ */
 public class LoginActivity extends AppCompatActivity {
-
+    /**
+     *
+     */
     private Button login;
+
+    /**
+     *
+     */
     private Button signUp;
+
+    /**
+     *
+     */
     private TextView username;
+
+    /**
+     *
+     */
     private TextView password;
+
+    /**
+     *
+     */
     private EditText usernameInsert;
+
+    /**
+     *
+     */
     private EditText passwordInsert;
+
+    /**
+     *
+     */
     private DbAdapter db;
+
+    /**
+     *
+     */
     private Session session;
 
     @Override
@@ -49,24 +82,24 @@ public class LoginActivity extends AppCompatActivity {
         password = (TextView)findViewById(R.id.password_text);
         usernameInsert = (EditText)findViewById(R.id.username_insert);
         passwordInsert = (EditText)findViewById(R.id.password_insert);
-
         login.setOnClickListener(listener);
         signUp.setOnClickListener(listener);
 
         if(session.loggedIn()){
-
            // Toast.makeText(this, "Logged in", Toast.LENGTH_SHORT).show();
         }
     }
 
+    /**
+     *
+     */
    private void logIn(){
         String username = usernameInsert.getText().toString();
         String pass = passwordInsert.getText().toString();
         if(db.getUser(username,pass)){
             session.setLoggedin(true);
-
+            startActivity(new Intent(LoginActivity.this,GameActivity.class));
             Toast.makeText(this, "User Logged in", Toast.LENGTH_SHORT).show();
-
         }
         else{
             Toast.makeText(this, "Wrong username/password!", Toast.LENGTH_SHORT).show();

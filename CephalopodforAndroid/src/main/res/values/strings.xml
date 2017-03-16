@@ -5,5 +5,17 @@
     <string name="app_name">Cephalopod Board Game</string>
     <string name="title_activity_game">Cephalopod by Mark Steere</string>
     <string name="game_over_message">Game over!</string>
+    <string name="rules_text">Rules: </string>
+
+    <!-- Strings related to Menu -->
+    <string name="rules_menu">Rules</string>
+    <string name="settings_menu">Settings</string>
+    <string name="about_menu">About</string>
+    <string name="title_activity_settings">Settings</string>
+    <string name="title_login_activity">Log in</string>
+    <string name="title_signup_activity">Sign up</string>
+    <string name="title_about_activity">About</string>
+    <string name="title_rules_activity">Rules</string>
+    <string name="title_settings_activity">Settings</string>
 
 </resources>
