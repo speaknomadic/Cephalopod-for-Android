@@ -165,9 +165,11 @@ public class Cell {
 
         /**
          * Factory for type converts from int to Type.
+         * <p>
+         * //* @param size Numeric id of the type of cell.
          *
-         //* @param size Numeric id of the type of cell.
-         * @return Type of the cell as reference. */
+         * @return Type of the cell as reference.
+         */
         public static Type instanceOf(int id) {
             for (Type type : Type.values()) {
                 if (type.id() == id) {
