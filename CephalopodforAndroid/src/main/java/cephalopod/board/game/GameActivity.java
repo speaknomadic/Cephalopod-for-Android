@@ -29,30 +29,19 @@ public class GameActivity extends Activity {
 
     private final Handler handler = new Handler();
 
-    /**
-     * Sounds pool instance to manage and play audio resources
-     */
+    //TODO Add Java Doc comments.
     private SoundPool sounds = null;
 
-    /**
-     * Click sound identifier  – id used as first argument in play() method, when button is clicked. The SoundPool plays it when a human makes a valid click.
-     */
+    //TODO Add Java Doc comments.
     private int clickId = -1;
 
-    /**
-     * Finish sound identifier – id used as first argument in play() method. The SoundPool plays it when the game is over.
-     */
+    //TODO Add Java Doc comments.
     private int finishId = -1;
 
-    /**
-     * Computer opponent bot thread. Anonymous class which implements Runnable()
-     */
+    //TODO Add Java Doc comments.
 
     private Runnable ai = new Runnable() {
-
-        /**
-         * Computer opponent object instance (executed by a thread). Bot's reference is of ArtificialIntelligence Interface type, bot's instance is of RandomArtificialIntelligence Interface type. Bot reference executes move method overriden in the RandomArtificialIntelligence Interface.
-         */
+        //TODO Add Java Doc comments.
         private ArtificialIntelligence bot = new RandomArtificialIntelligence();
 
         /**
@@ -80,8 +69,8 @@ public class GameActivity extends Activity {
             int move[] = bot.move(board.getCells(), Cell.Type.play(board.getTurn() % 2));
 
 			/*
-             * Play bot's move.
-             */
+			 * Play move.
+			 */
             boolean result = board.click(move[0], move[1]);
             if (result == true) {
                 if (board.hasWinner() == true) {
@@ -98,15 +87,11 @@ public class GameActivity extends Activity {
      */
     private Board board = new Board();
 
-    /**
-     * Keep references to all image view components.
-     */
+    //TODO Add Java Doc comments.
     private ImageView images[][] = {{null, null, null, null, null}, {null, null, null, null, null},
             {null, null, null, null, null}, {null, null, null, null, null}, {null, null, null, null, null},};
 
-    /**
-     * Cells click listener. Checks if game is over. Checks if computer bot is on turn.
-     */
+    //TODO Add Java Doc comments.
     private View.OnClickListener click = new View.OnClickListener() {
         //TODO Add Java Doc comments.
         @Override
@@ -160,9 +145,7 @@ public class GameActivity extends Activity {
         }
     };
 
-    /**
-     * Update all visual controls.
-     */
+    //TODO Add Java Doc comments.
     private void updateViews() {
         /*
          * Play sound for game over.
