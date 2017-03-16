@@ -8,105 +8,128 @@
     android:background="@color/blue"
     tools:context="cephalopod.board.game.SignUpActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Username:"
-        android:layout_gravity="center_horizontal"
-        android:layout_margin="20dp"
-        android:textSize="25sp"
-        android:padding="20dp"
-        android:textColor="@color/darkGrey"
-        />
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="0dp"
+       android:layout_weight="1"
+       android:orientation="vertical">
+       <TextView
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:text="Username:"
+           android:layout_gravity="center_horizontal"
+           android:layout_marginTop="0dp"
+           android:textSize="25sp"
+           android:padding="20dp"
+           android:textColor="@color/darkGrey"
+           />
 
-    <EditText
+       <EditText
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="-20dp"
+           android:layout_marginLeft="50dp"
+           android:layout_marginRight="50dp"
+           android:layout_marginBottom="10dp"
+           android:textColorHint="@color/darkGrey"
+           android:id="@+id/signupusername_insert" />
+   </LinearLayout>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-30dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="10dp"
-        android:singleLine="true"
-        android:textColorHint="@color/darkGrey"
-        android:id="@+id/username_insert" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Password:"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-20dp"
+            android:textSize="25sp"
+            android:padding="20dp"
+            android:textColor="@color/darkGrey"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:singleLine="true"
+            android:textColorHint="@color/darkGrey"
+            android:id="@+id/signuppassword_insert" />
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Password:"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="-20dp"
-        android:textSize="25sp"
-        android:padding="20dp"
-        android:textColor="@color/darkGrey"
-        />
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="textPassword"
-        android:maxLength="20"
-        android:singleLine="true"
-        android:textColorHint="@color/darkGrey"
-        android:id="@+id/password_insert" />
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Confirm password:"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-20dp"
+            android:textSize="25sp"
+            android:padding="20dp"
+            android:textColor="@color/darkGrey"
+            />
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="-20dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginBottom="10dp"
+            android:inputType="textPassword"
+            android:maxLength="20"
+            android:textColorHint="@color/darkGrey"
+            android:id="@+id/signupconfirmpass_insert" />
+    </LinearLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Confirm password:"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="-20dp"
-        android:textSize="25sp"
-        android:padding="20dp"
-        android:textColor="@color/darkGrey"
-        />
-    <EditText
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="-20dp"
-        android:layout_marginLeft="50dp"
-        android:layout_marginRight="50dp"
-        android:layout_marginBottom="10dp"
-        android:inputType="textPassword"
-        android:maxLength="20"
-        android:textColorHint="@color/darkGrey"
-        android:id="@+id/confirmpass_insert" />
-
-    <Button
-        android:id="@+id/registration_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Sign up"
-        android:layout_marginTop="-10dp"
-        android:layout_marginLeft="145dp"
-        android:textColor="@color/darkGrey"
-        android:fontFamily="@string/app_name"
-        android:textSize="20sp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/shadow"
-        android:onClick="sign_up"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1">
+        <Button
+            android:id="@+id/signupregistration_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sign up"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="100dp"
+            android:textColor="@color/darkGrey"
+            android:fontFamily="@string/app_name"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shadow"
+            android:onClick="sign_up"
 
 
-        />
-    <Button
-        android:id="@+id/loggin_button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="LOGIN"
-        android:layout_marginTop="30dp"
-        android:layout_marginLeft="145dp"
-        android:textColor="@color/darkGrey"
-        android:fontFamily="@string/app_name"
-        android:textSize="20sp"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/shadow"
-        android:onClick="login"
+            />
+        <Button
+            android:id="@+id/signuploggin_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="LOGIN"
+            android:layout_marginTop="0dp"
+            android:layout_marginLeft="15dp"
+            android:textColor="@color/darkGrey"
+            android:fontFamily="@string/app_name"
+            android:textSize="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/shadow"
+            android:onClick="login"
 
 
-        />
+            />
+    </LinearLayout>
 </LinearLayout>
