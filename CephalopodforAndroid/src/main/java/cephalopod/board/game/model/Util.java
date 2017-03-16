@@ -2,14 +2,18 @@ package cephalopod.board.game.model;
 
 import java.util.Random;
 
-//TODO Add Java Doc comments.
+/**
+ * Utilities class.
+ */
 public final class Util {
     /**
      * Pseudo-random number generator. Only single instance is used in the project.
      */
     public static final Random PRNG = new Random();
 
-    //TODO Add Java Doc comments.
+    /*
+    *Default Constructor of the Utilities class
+     */
     private Util() {
         /*
          * Class usage only.

@@ -246,7 +246,6 @@ public class DbAdapter {
          */
         String[] columns = {DbHelper.COLUMN_USERNAME, DbHelper.COLUMN_PASS};
 
-
         /**
          * A call to the query method. Cursor object returned by the query method. The cursor object's reference is the control which let's us move from the top to the bottom of the table's result sets.
          * The method query takes seven parameters: String table, String[] columns (list of columns to process, null returns all); extra conditions on the SQL statement to return rows satisfying certain criteria, String selection, String [] selectionArgs, String groupBy, String having, String orderby

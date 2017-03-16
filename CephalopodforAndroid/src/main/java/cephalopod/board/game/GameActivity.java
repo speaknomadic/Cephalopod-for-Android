@@ -29,17 +29,24 @@ public class GameActivity extends Activity {
 
     private final Handler handler = new Handler();
 
-    //TODO Add Java Doc comments.
+    /**
+     * Sounds pool.
+     */
     private SoundPool sounds = null;
 
-    //TODO Add Java Doc comments.
+    /**
+     * Click sound identifier.
+     */
     private int clickId = -1;
 
-    //TODO Add Java Doc comments.
+    /**
+     * Finish sound identifier.
+     */
     private int finishId = -1;
 
-    //TODO Add Java Doc comments.
-
+    /**
+     * Computer opponent thread.
+     */
     private Runnable ai = new Runnable() {
         //TODO Add Java Doc comments.
         private ArtificialIntelligence bot = new RandomArtificialIntelligence();
@@ -69,7 +76,7 @@ public class GameActivity extends Activity {
             int move[] = bot.move(board.getCells(), Cell.Type.play(board.getTurn() % 2));
 
 			/*
-			 * Play move.
+             * Play move.
 			 */
             boolean result = board.click(move[0], move[1]);
             if (result == true) {
@@ -87,11 +94,15 @@ public class GameActivity extends Activity {
      */
     private Board board = new Board();
 
-    //TODO Add Java Doc comments.
+    /**
+     * Keep references to all image view components.
+     */
     private ImageView images[][] = {{null, null, null, null, null}, {null, null, null, null, null},
             {null, null, null, null, null}, {null, null, null, null, null}, {null, null, null, null, null},};
 
-    //TODO Add Java Doc comments.
+    /**
+     * Cells click listener.
+     */
     private View.OnClickListener click = new View.OnClickListener() {
         //TODO Add Java Doc comments.
         @Override
@@ -145,7 +156,9 @@ public class GameActivity extends Activity {
         }
     };
 
-    //TODO Add Java Doc comments.
+    /**
+     * Update all visual controls.
+     */
     private void updateViews() {
         /*
          * Play sound for game over.
@@ -237,8 +250,6 @@ public class GameActivity extends Activity {
 		/*
 		 * Load sounds.
 		 */
-
-
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
         clickId = sounds.load(this, R.raw.schademans_pipe9, 1);
         finishId = sounds.load(this, R.raw.game_sound_correct, 1);

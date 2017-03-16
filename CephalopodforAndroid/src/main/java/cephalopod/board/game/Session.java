@@ -8,22 +8,22 @@ import android.content.SharedPreferences;
  */
 
 /**
- * Session class stores data from login
+ * Session class stores data from login.
  */
 public class Session {
 
     /**
-     *
+     * Reference to the SharedPreferences object.
      */
-
     SharedPreferences prefs;
+
     /**
-     *
+     * Reference to the SharedPreferences Editor.
      */
     SharedPreferences.Editor editor;
 
     /**
-     *
+     * Reference to Context.
      */
     Context ctx;
 
