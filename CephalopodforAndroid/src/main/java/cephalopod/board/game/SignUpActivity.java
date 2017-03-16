@@ -30,19 +30,19 @@ public class SignUpActivity extends AppCompatActivity {
         setContentView(R.layout.activity_sign_up);
 
         dbhelper = new DbAdapter(this);
-        usernameInsert = (EditText)findViewById(R.id.username_insert);
-        passInsert = (EditText)findViewById(R.id.password_insert);
-        confirmPassInsert = (EditText)findViewById(R.id.confirmpass_insert);
-        signUp = (Button)findViewById(R.id.registration_button);
-        logIn = (Button)findViewById(R.id.loggin_button) ;
+        usernameInsert = (EditText)findViewById(R.id.signupusername_insert);
+        passInsert = (EditText)findViewById(R.id.signuppassword_insert);
+        confirmPassInsert = (EditText)findViewById(R.id.signupconfirmpass_insert);
+        signUp = (Button)findViewById(R.id.signupregistration_button);
+        logIn = (Button)findViewById(R.id.signuploggin_button) ;
         View.OnClickListener listener = new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 switch (v.getId()){
-                    case R.id.registration_button:
+                    case R.id.signupregistration_button:
                         addUser();
                         break;
-                    case R.id.loggin_button:
+                    case R.id.signuploggin_button:
                         startActivity(new Intent(SignUpActivity.this,LoginActivity.class));
                         break;
                     default:
