@@ -17,5 +17,9 @@
     <string name="title_about_activity">About</string>
     <string name="title_rules_activity">Rules</string>
     <string name="title_settings_activity">Settings</string>
+    <string name="button_save_text">Save</string>
+    <string name="button_load_text">Load</string>
+    <string name="new_game">New</string>
+    <string name="button_score">Score</string>
 
 </resources>

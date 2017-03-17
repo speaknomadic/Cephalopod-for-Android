@@ -1,9 +1,12 @@
 package cephalopod.board.game.model;
 
+import java.io.Serializable;
+
 /**
  * Cell class describes single cell.
  */
-public class Cell {
+public class Cell implements Serializable {
+
     /**
      * Cell type.
      */
@@ -164,6 +167,17 @@ public class Cell {
         private String symbol = "";
 
         /**
+         * Constructor.
+         *
+         * @param id     Numeric identifier.
+         * @param symbol Symbol for string representation.
+         */
+        private Type(int id, String symbol) {
+            this.id = id;
+            this.symbol = symbol;
+        }
+
+        /**
          * Factory for type converts from int to Type.
          * <p>
          * //* @param size Numeric id of the type of cell.
@@ -201,17 +215,6 @@ public class Cell {
             }
 
             return EMPTY;
-        }
-
-        /**
-         * Constructor.
-         *
-         * @param id     Numeric identifier.
-         * @param symbol Symbol for string representation.
-         */
-        private Type(int id, String symbol) {
-            this.id = id;
-            this.symbol = symbol;
         }
 
         /**

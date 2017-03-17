@@ -11,7 +11,8 @@ public class RandomArtificialIntelligence implements ArtificialIntelligence {
 
     /**
      * Generate bot`s move
-     * @param cells - the board
+     *
+     * @param cells  - the board
      * @param player - type of the player
      * @return
      * @throws ImpossibleMoveException
@@ -28,8 +29,9 @@ public class RandomArtificialIntelligence implements ArtificialIntelligence {
             x = Util.PRNG.nextInt(cells.length);
             y = Util.PRNG.nextInt(cells[x].length);
         } while (cells[x][y].getType() != Type.EMPTY);
-        return new int[] {x, y
+        return new int[]{x, y
         };
+
 		/*
          * Return x and y of the move as two cells 1D array.
 		 */

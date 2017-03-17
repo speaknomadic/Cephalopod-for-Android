@@ -1,11 +1,12 @@
 package cephalopod.board.game.model;
 
+import java.io.Serializable;
 import java.util.Random;
 
 /**
  * Utilities class.
  */
-public final class Util {
+public final class Util implements Serializable {
     /**
      * Pseudo-random number generator. Only single instance is used in the project.
      */

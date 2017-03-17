@@ -10,13 +10,14 @@ public class AlphaBetaArtificialIntelligence implements ArtificialIntelligence {
 
     /**
      * Generate bot`s move
-     * @param cells - the board
+     *
+     * @param cells  - the board
      * @param player - type of the player
      * @return
      * @throws ImpossibleMoveException
      */
     @Override
-    public int[] move( Cell[][] cells , Type player) throws ImpossibleMoveException {
+    public int[] move(Cell[][] cells, Type player) throws ImpossibleMoveException {
         /**
          * It stops completely evaluating a move when at least one possibility has been found
          * that proves the move to be worse than a previously examined move.

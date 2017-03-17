@@ -4,64 +4,65 @@
     android:id="@+id/activity_sign_up"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
     android:background="@color/blue"
+    android:orientation="vertical"
     tools:context="cephalopod.board.game.SignUpActivity">
-
-   <LinearLayout
-       android:layout_width="match_parent"
-       android:layout_height="0dp"
-       android:layout_weight="1"
-       android:orientation="vertical">
-       <TextView
-           android:layout_width="wrap_content"
-           android:layout_height="wrap_content"
-           android:text="Username:"
-           android:layout_gravity="center_horizontal"
-           android:layout_marginTop="0dp"
-           android:textSize="25sp"
-           android:padding="20dp"
-           android:textColor="@color/darkGrey"
-           />
-
-       <EditText
-           android:layout_width="match_parent"
-           android:layout_height="wrap_content"
-           android:layout_marginTop="-20dp"
-           android:layout_marginLeft="50dp"
-           android:layout_marginRight="50dp"
-           android:layout_marginBottom="10dp"
-           android:textColorHint="@color/darkGrey"
-           android:id="@+id/signupusername_insert" />
-   </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Password:"
             android:layout_gravity="center_horizontal"
-            android:layout_marginTop="-20dp"
-            android:textSize="25sp"
+            android:layout_marginTop="0dp"
             android:padding="20dp"
+            android:text="Username:"
             android:textColor="@color/darkGrey"
-            />
+            android:textSize="25sp" />
+
         <EditText
+            android:id="@+id/signupusername_insert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
+            android:layout_marginTop="-20dp"
+            android:textColorHint="@color/darkGrey" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="-20dp"
+            android:padding="20dp"
+            android:text="Password:"
+            android:textColor="@color/darkGrey"
+            android:textSize="25sp" />
+
+        <EditText
+            android:id="@+id/signuppassword_insert"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_marginBottom="10dp"
+            android:layout_marginLeft="50dp"
+            android:layout_marginRight="50dp"
+            android:layout_marginTop="-20dp"
             android:inputType="textPassword"
             android:maxLength="20"
             android:singleLine="true"
-            android:textColorHint="@color/darkGrey"
-            android:id="@+id/signuppassword_insert" />
+            android:textColorHint="@color/darkGrey" />
     </LinearLayout>
 
     <LinearLayout
@@ -69,65 +70,68 @@
         android:layout_height="0dp"
         android:layout_weight="1"
         android:orientation="vertical">
+
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Confirm password:"
             android:layout_gravity="center_horizontal"
             android:layout_marginTop="-20dp"
-            android:textSize="25sp"
             android:padding="20dp"
+            android:text="Confirm password:"
             android:textColor="@color/darkGrey"
-            />
+            android:textSize="25sp" />
+
         <EditText
+            android:id="@+id/signupconfirmpass_insert"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="-20dp"
+            android:layout_marginBottom="10dp"
             android:layout_marginLeft="50dp"
             android:layout_marginRight="50dp"
-            android:layout_marginBottom="10dp"
+            android:layout_marginTop="-20dp"
             android:inputType="textPassword"
             android:maxLength="20"
-            android:textColorHint="@color/darkGrey"
-            android:id="@+id/signupconfirmpass_insert" />
+            android:textColorHint="@color/darkGrey" />
     </LinearLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:orientation="horizontal"
-        android:layout_weight="1">
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
         <Button
             android:id="@+id/signupregistration_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Sign up"
-            android:layout_marginTop="0dp"
-            android:layout_marginLeft="100dp"
-            android:textColor="@color/darkGrey"
-            android:fontFamily="@string/app_name"
-            android:textSize="20sp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="0dp"
             android:background="@drawable/shadow"
+            android:fontFamily="@string/app_name"
             android:onClick="sign_up"
+            android:text="Sign up"
+            android:textColor="@color/darkGrey"
+            android:textSize="20sp"
 
 
             />
+
         <Button
             android:id="@+id/signuploggin_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="LOGIN"
-            android:layout_marginTop="0dp"
-            android:layout_marginLeft="15dp"
-            android:textColor="@color/darkGrey"
-            android:fontFamily="@string/app_name"
-            android:textSize="20sp"
             android:layout_alignParentBottom="true"
             android:layout_centerHorizontal="true"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="0dp"
             android:background="@drawable/shadow"
+            android:fontFamily="@string/app_name"
             android:onClick="login"
+            android:text="LOGIN"
+            android:textColor="@color/darkGrey"
+            android:textSize="20sp"
 
 
             />

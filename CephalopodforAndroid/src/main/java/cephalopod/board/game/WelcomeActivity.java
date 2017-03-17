@@ -6,7 +6,6 @@ import android.support.v7.app.AppCompatActivity;
 /**
  * Welcome screen.
  */
-
 public class WelcomeActivity extends AppCompatActivity {
 
     /**
