@@ -190,7 +190,6 @@ public class Board implements Serializable {
             cells[x][y] = new Cell(Cell.Type.play(turn), Size.instanceOf(neighbours));
             remove(x, y);
         }
-
         return true;
     }
 
