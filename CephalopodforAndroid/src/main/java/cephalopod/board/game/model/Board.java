@@ -1,12 +1,6 @@
 package cephalopod.board.game.model;
 
-import java.io.ByteArrayInputStream;
-import java.io.ByteArrayOutputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.ObjectOutputStream;
 import java.io.Serializable;
-import java.io.StreamCorruptedException;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -215,7 +209,6 @@ public class Board implements Serializable {
                 }
             }
         }
-
         return true;
     }
 
@@ -258,11 +251,9 @@ public class Board implements Serializable {
             if (counters.get(type) < max) {
                 continue;
             }
-
             winner = type;
             max = counters.get(type);
         }
-
         return winner;
     }
 
@@ -280,8 +271,7 @@ public class Board implements Serializable {
         for (Type type : Type.values()) {
             result.put(type, 0);
         }
-
-		/*
+        /*
          * Count occupied cells.
 		 */
         for (int i = 0; i < cells.length; i++) {
@@ -290,7 +280,6 @@ public class Board implements Serializable {
                 result.put(type, 1 + result.get(type));
             }
         }
-
         return result;
     }
 
@@ -333,59 +322,5 @@ public class Board implements Serializable {
      */
     public void next() {
         turn++;
-    }
-
-    /**
-     * Convert board to bytes array.
-     *
-     * @return The game board as bites.
-     */
-    public byte[] toBytes() {
-        byte bytes[] = {};
-        ByteArrayOutputStream out = null;
-        try {
-            (new ObjectOutputStream(out = new ByteArrayOutputStream())).writeObject(this);
-            out.flush();
-            bytes = out.toByteArray();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                out.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        return bytes;
-    }
-
-    /**
-     * Convert bytes to a board object.
-     *
-     * @param bytes Array of bytes representing a board.
-     */
-
-    public void fromBytes(byte[] bytes) {
-        Board board = this;
-        ObjectInputStream in = null;
-        try {
-            in = new ObjectInputStream(new ByteArrayInputStream(bytes));
-            board = (Board) in.readObject();
-        } catch (StreamCorruptedException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ClassNotFoundException e) {
-            e.printStackTrace();
-        } finally {
-            try {
-                in.close();
-            } catch (IOException e) {
-                e.printStackTrace();
-            }
-        }
-        this.turn = board.turn;
-        this.gameOver = board.gameOver;
-        this.cells = board.cells;
     }
 }

@@ -18,127 +18,6 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DbAdapter {
 
     /**
-     * Inner static class which is responsible for the creation of  database.
-     * A custom class implementation of SQLiteOpenHelper is created. Database's schema is defined programatically.
-     * This class takes care of opening the database if it exists, creating it if it does not exist and upgrading it if necessary.
-     */
-    static class DbHelper extends SQLiteOpenHelper {
-
-        /**
-         * Definition of context;
-         */
-        private Context context;
-
-        /**
-         * Definition of unique for the application database name. Specify a String constant.
-         */
-        private static final String DB_NAME = "cephalopod.db";
-
-        /**
-         * Definition of the database's table name. Specify a String constant.
-         */
-        private static final String TABLE_NAME = "CEPHALOPOD";
-
-        /**
-         * Definition of database version int constant.When database is changed version should be modified to next int.
-         */
-        private static final int DB_VERSION = 6;
-
-        /**
-         * Definition of the primary key. The key constant autoincrements.
-         */
-        private static final String COLUMN_ID = "_id";
-
-        /**
-         * Definition of the name of column 1; Specify a String constant.
-         */
-        private static final String COLUMN_USERNAME = "username";
-
-        /**
-         * Definition of the name of column 2; Specify a String constant.
-         */
-        private static final String COLUMN_PASS = "password";
-
-        /**
-         * create database of users(
-         * id integer primary key autoincrement,
-         * username text,
-         * password text);
-         */
-        public static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + COLUMN_ID +
-                " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USERNAME + " VARCHAR(255), " +
-                COLUMN_PASS + " VARCHAR(255));";
-
-        /**
-         * Constant String SQL statement for erasing old version of table.
-         */
-        public static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
-
-        /**
-         * Declaration of constructor the supertype class. Object is responsible for the creation of database and
-         * editing of database. Constructor takes context as parameter.
-         * Super constructor takes four parameters(context, database name, custom cursor object and version of database.
-         * Since we do not create custom cursor factory, we pass null.
-         *
-         * @param context
-         */
-        public DbHelper(Context context) {
-            super(context, DB_NAME, null, DB_VERSION);
-            this.context = context;
-        }
-
-        /**
-         * {@inheritDoc}
-         * The method is called when the database is first created. Creation of tables and initial data inside tables is put here.
-         *
-         * @param db
-         */
-        @Override
-        public void onCreate(SQLiteDatabase db) {
-            try {
-                /**
-                 * Executes a single SQL statement that is NOT a SELECT and does not return data.
-                 */
-                db.execSQL(CREATE_TABLE);
-                /**
-                 * If the SQL statement is invalid it throws an exception.
-                 */
-            } catch (SQLException e) {
-                Message.message(context, "" + e);
-            }
-        }
-
-        /**
-         * {@inheritDoc}
-         * Method is called when database needs to be upgraded. It is triggered when updates are made.
-         * This method is used to drop tables, add tables, do anything that needs to upgrade to new version of schema.
-         * It deletes the old table and creates the new one with new parameters with query.
-         *
-         * @param db         - the database.
-         * @param oldVersion - go from old version
-         * @param newVersion - to new version.
-         */
-        @Override
-        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
-            try {
-                /**
-                 * When there are edits, the old table is deleted.
-                 */
-                db.execSQL(DROP_TABLE);
-                /**
-                 * Once the table is deleted the new database is created once again with new statements.
-                 */
-                onCreate(db);
-                /**
-                 * If the SQL statement is invalid it throws an exception.
-                 */
-            } catch (SQLException e) {
-                Message.message(context, "" + e);
-            }
-        }
-    }
-
-    /**
      * Declaration of fields of the adapter class. A reference to innerclass will executes queries.
      */
     private DbHelper helper;
@@ -246,7 +125,6 @@ public class DbAdapter {
          */
         String[] columns = {DbHelper.COLUMN_USERNAME, DbHelper.COLUMN_PASS};
 
-
         /**
          * A call to the query method. Cursor object returned by the query method. The cursor object's reference is the control which let's us move from the top to the bottom of the table's result sets.
          * The method query takes seven parameters: String table, String[] columns (list of columns to process, null returns all); extra conditions on the SQL statement to return rows satisfying certain criteria, String selection, String [] selectionArgs, String groupBy, String having, String orderby
@@ -278,6 +156,123 @@ public class DbAdapter {
             return true;
         }
         return false;
+    }
+
+    /**
+     * Inner static class which is responsible for the creation of  database.
+     * A custom class implementation of SQLiteOpenHelper is created. Database's schema is defined programatically.
+     * This class takes care of opening the database if it exists, creating it if it does not exist and upgrading it if necessary.
+     */
+    static class DbHelper extends SQLiteOpenHelper {
+
+        /**
+         * Definition of unique for the application database name. Specify a String constant.
+         */
+        private static final String DB_NAME = "cephalopod.db";
+        /**
+         * Definition of the database's table name. Specify a String constant.
+         */
+        private static final String TABLE_NAME = "CEPHALOPOD";
+        /**
+         * Constant String SQL statement for erasing old version of table.
+         */
+        public static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
+        /**
+         * Definition of database version int constant.When database is changed version should be modified to next int.
+         */
+        private static final int DB_VERSION = 6;
+
+        /**
+         * Definition of the primary key. The key constant autoincrements.
+         */
+        private static final String COLUMN_ID = "_id";
+
+        /**
+         * Definition of the name of column 1; Specify a String constant.
+         */
+        private static final String COLUMN_USERNAME = "username";
+
+        /**
+         * Definition of the name of column 2; Specify a String constant.
+         */
+        private static final String COLUMN_PASS = "password";
+
+        /**
+         * create database of users(
+         * id integer primary key autoincrement,
+         * username text,
+         * password text);
+         */
+        public static final String CREATE_TABLE = "CREATE TABLE " + TABLE_NAME + "(" + COLUMN_ID +
+                " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_USERNAME + " VARCHAR(255), " +
+                COLUMN_PASS + " VARCHAR(255));";
+        /**
+         * Definition of context;
+         */
+        private Context context;
+
+        /**
+         * Declaration of constructor the supertype class. Object is responsible for the creation of database and
+         * editing of database. Constructor takes context as parameter.
+         * Super constructor takes four parameters(context, database name, custom cursor object and version of database.
+         * Since we do not create custom cursor factory, we pass null.
+         *
+         * @param context
+         */
+        public DbHelper(Context context) {
+            super(context, DB_NAME, null, DB_VERSION);
+            this.context = context;
+        }
+
+        /**
+         * {@inheritDoc}
+         * The method is called when the database is first created. Creation of tables and initial data inside tables is put here.
+         *
+         * @param db
+         */
+        @Override
+        public void onCreate(SQLiteDatabase db) {
+            try {
+                /**
+                 * Executes a single SQL statement that is NOT a SELECT and does not return data.
+                 */
+                db.execSQL(CREATE_TABLE);
+                /**
+                 * If the SQL statement is invalid it throws an exception.
+                 */
+            } catch (SQLException e) {
+                Message.message(context, "" + e);
+            }
+        }
+
+        /**
+         * {@inheritDoc}
+         * Method is called when database needs to be upgraded. It is triggered when updates are made.
+         * This method is used to drop tables, add tables, do anything that needs to upgrade to new version of schema.
+         * It deletes the old table and creates the new one with new parameters with query.
+         *
+         * @param db         - the database.
+         * @param oldVersion - go from old version
+         * @param newVersion - to new version.
+         */
+        @Override
+        public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
+            try {
+                /**
+                 * When there are edits, the old table is deleted.
+                 */
+                db.execSQL(DROP_TABLE);
+                /**
+                 * Once the table is deleted the new database is created once again with new statements.
+                 */
+                onCreate(db);
+                /**
+                 * If the SQL statement is invalid it throws an exception.
+                 */
+            } catch (SQLException e) {
+                Message.message(context, "" + e);
+            }
+        }
     }
 }
 

@@ -9,7 +9,8 @@ public interface ArtificialIntelligence {
 
     /**
      * Generate bot`s move
-     * @param cells - the board
+     *
+     * @param cells  - the board
      * @param player - type of the player
      * @return
      * @throws ImpossibleMoveException

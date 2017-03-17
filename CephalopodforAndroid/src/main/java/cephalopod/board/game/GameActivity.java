@@ -1,17 +1,24 @@
 package cephalopod.board.game;
 
-import android.app.Activity;
-import android.content.Intent;
+import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.Menu;
-import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.Toast;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.ObjectInputStream;
+import java.io.ObjectOutputStream;
 
 import cephalopod.board.game.model.Board;
 import cephalopod.board.game.model.Cell;
@@ -21,7 +28,7 @@ import cephalopod.board.game.model.ai.RandomArtificialIntelligence;
 /**
  * Game screen.
  */
-public class GameActivity extends Activity {
+public class GameActivity extends MenuActivity {
 
     /**
      * Handler instance associated with the bot thread
@@ -29,17 +36,41 @@ public class GameActivity extends Activity {
 
     private final Handler handler = new Handler();
 
-    //TODO Add Java Doc comments.
+    /**
+     * Sounds pool.
+     */
     private SoundPool sounds = null;
 
-    //TODO Add Java Doc comments.
+    /**
+     * Click sound identifier.
+     */
     private int clickId = -1;
 
-    //TODO Add Java Doc comments.
+    /**
+     * Finish sound identifier.
+     */
     private int finishId = -1;
 
-    //TODO Add Java Doc comments.
+    //TODO: Add comments;
+    private Button saveGame;
 
+    //TODO: Add comments;
+    private Button loadGame;
+
+    //TODO: Add comments
+    private Button newGame;
+    /**
+     * An instance of a board object.
+     */
+    private Board board = new Board();
+    /**
+     * Keep references to all image view components.
+     */
+    private ImageView images[][] = {{null, null, null, null, null}, {null, null, null, null, null},
+            {null, null, null, null, null}, {null, null, null, null, null}, {null, null, null, null, null},};
+    /**
+     * Computer opponent thread.
+     */
     private Runnable ai = new Runnable() {
         //TODO Add Java Doc comments.
         private ArtificialIntelligence bot = new RandomArtificialIntelligence();
@@ -69,7 +100,7 @@ public class GameActivity extends Activity {
             int move[] = bot.move(board.getCells(), Cell.Type.play(board.getTurn() % 2));
 
 			/*
-			 * Play move.
+             * Play move.
 			 */
             boolean result = board.click(move[0], move[1]);
             if (result == true) {
@@ -81,19 +112,14 @@ public class GameActivity extends Activity {
             updateViews();
         }
     };
-
     /**
-     * An instance of a board object.
+     * Cells on click listener.
      */
-    private Board board = new Board();
-
-    //TODO Add Java Doc comments.
-    private ImageView images[][] = {{null, null, null, null, null}, {null, null, null, null, null},
-            {null, null, null, null, null}, {null, null, null, null, null}, {null, null, null, null, null},};
-
-    //TODO Add Java Doc comments.
     private View.OnClickListener click = new View.OnClickListener() {
-        //TODO Add Java Doc comments.
+        /**
+         * Listener sets an image with dice number for a cell after a valid move, checks for winner, updates board after a click
+         * @param view
+         */
         @Override
         public void onClick(View view) {
 /*
@@ -141,11 +167,91 @@ public class GameActivity extends Activity {
              * Update user interface.
 			 */
             updateViews();
-
         }
     };
 
-    //TODO Add Java Doc comments.
+    /**
+     * Save game button on click listener.
+     */
+
+    private View.OnClickListener save = new View.OnClickListener() {
+
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public void onClick(View v) {
+            FileOutputStream fileOutputStream = null;
+            String FILENAME = "mygame.txt";
+            try {
+                fileOutputStream = GameActivity.this.openFileOutput(FILENAME, Context.MODE_PRIVATE);
+                ObjectOutputStream os = new ObjectOutputStream(fileOutputStream);
+                os.writeObject(board);
+                Message.message(GameActivity.this, "Your game was saved.");
+            } catch (FileNotFoundException e) {
+                Log.d("FILE", "File not found");
+                Message.message(GameActivity.this, "The file was not found.");
+            } catch (IOException e) {
+                Log.d("FILE", "IOException" + e.toString());
+                Message.message(GameActivity.this, "Saving game was unsuccessfull");
+            } finally {
+                try {
+                    fileOutputStream.close();
+                } catch (IOException e) {
+                    Log.d("FILE", "IOException" + e.toString());
+                    Message.message(GameActivity.this, "Saving game was unsuccessfull");
+                }
+            }
+        }
+    };
+
+    /**
+     * Load game button on click listener
+     */
+
+    private View.OnClickListener load = new View.OnClickListener() {
+        /**
+         * {@inheritDoc}
+         */
+        @Override
+        public void onClick(View v) {
+            FileInputStream fileInputStream = null;
+            ObjectInputStream inputStream = null;
+
+            try {
+                fileInputStream = GameActivity.this.openFileInput("mygame.txt");
+                inputStream = new ObjectInputStream(fileInputStream);
+                board = (Board) inputStream.readObject();
+
+                updateViews();
+            } catch (FileNotFoundException e1) {
+                Log.d("FILE", "File not found");
+                Message.message(GameActivity.this, "The file was not found.");
+            } catch (IOException e1) {
+                Log.d("FILE", "IOException" + e1.toString());
+                Message.message(GameActivity.this, "Loading game was unsuccessfull");
+            } catch (ClassNotFoundException e1) {
+                e1.printStackTrace();
+            } finally {
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    Log.d("FILE", "IOException" + e.toString());
+                    Message.message(GameActivity.this, "Loading game was unsuccessfull");
+                }
+                try {
+                    fileInputStream.close();
+                } catch (IOException e) {
+                    Log.d("FILE", "IOException" + e.toString());
+                    Message.message(GameActivity.this, "Loading game was unsuccessfull");
+                }
+            }
+        }
+    };
+
+    /**
+     * Update all visual controls.
+     */
     private void updateViews() {
         /*
          * Play sound for game over.
@@ -219,7 +325,7 @@ public class GameActivity extends Activity {
         }
 
 		/*
-		 * Report game over.
+         * Report game over.
 		 */
         if (board.isGameOver() == true) {
             Toast.makeText(this, getResources().getString(R.string.game_over_message), Toast.LENGTH_LONG).show();
@@ -235,16 +341,14 @@ public class GameActivity extends Activity {
         setContentView(R.layout.activity_game);
 
 		/*
-		 * Load sounds.
+         * Load sounds.
 		 */
-
-
         sounds = new SoundPool(2, AudioManager.STREAM_MUSIC, 0);
         clickId = sounds.load(this, R.raw.schademans_pipe9, 1);
         finishId = sounds.load(this, R.raw.game_sound_correct, 1);
 
 		/*
-		 * Refer all image controls.
+         * Refer all image controls.
 		 */
         images[0][0] = (ImageView) findViewById(R.id.cell00);
         images[0][1] = (ImageView) findViewById(R.id.cell01);
@@ -278,7 +382,45 @@ public class GameActivity extends Activity {
             }
         }
 
-    /*
+
+        /**
+         * Refers the save button;
+         */
+        saveGame = (Button) findViewById(R.id.button_save);
+
+        /**
+         * As a user navigates out of our app on a click of save button the last game is saved to a file.
+         *
+         */
+        saveGame.setOnClickListener(save);
+        loadGame = (Button) findViewById(R.id.button_load);
+
+        /**
+         * As a user navigates back to our app on a click of load button the last game is restored from a  file.
+         *
+         */
+        loadGame.setOnClickListener(load);
+        newGame = (Button) findViewById(R.id.button_reset);
+
+        /**
+         * Play new game functionality.
+         *
+         */
+        newGame.setOnClickListener(new View.OnClickListener() {
+            /**
+             * {@inheritDoc}
+             */
+            @Override
+            public void onClick(View v) {
+                board.reset();
+                /*
+             * Update user interface.
+			 */
+                updateViews();
+            }
+        });
+
+         /*
      * Update screen.
      */
         updateViews();
@@ -299,11 +441,7 @@ public class GameActivity extends Activity {
      */
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        /**
-         * Inflate menu xml file, using instance of object inflater
-         */
-        MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.game_option_menu, menu);
+        super.onCreateOptionsMenu(menu);
         return true;
     }
 
@@ -312,21 +450,26 @@ public class GameActivity extends Activity {
      */
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        /**
-         * Handle item selection
-         */
-        switch (item.getItemId()) {
-            case R.id.settings:
-                startActivity(new Intent(GameActivity.this, SettingsActivity.class));
-                return true;
-            case R.id.rules:
-                startActivity(new Intent(GameActivity.this, RulesActivity.class));
-                return true;
-            case R.id.about:
-                startActivity(new Intent(GameActivity.this, AboutActivity.class));
-                return true;
-            default:
-                return super.onOptionsItemSelected(item);
-        }
+        return super.onOptionsItemSelected(item);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected void onSaveInstanceState(Bundle outState) {
+        super.onSaveInstanceState(outState);
+        outState.putSerializable("board", board);
+    }
+
+    /**
+     * {@inheritDoc}
+     */
+    @Override
+    protected void onRestoreInstanceState(Bundle savedInstanceState) {
+        super.onRestoreInstanceState(savedInstanceState);
+        board = (Board) savedInstanceState.getSerializable("board");
+        updateViews();
     }
 }
+

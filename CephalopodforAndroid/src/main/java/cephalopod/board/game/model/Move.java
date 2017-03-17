@@ -1,9 +1,11 @@
 package cephalopod.board.game.model;
 
+import java.io.Serializable;
+
 /**
  * Single game move.
  */
-public class Move {
+public class Move implements Serializable {
 
     /**
      * X coordinate of the move.

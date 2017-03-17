@@ -11,7 +11,6 @@ public class RulesActivity extends AppCompatActivity {
     /**
      * {@inheritDoc}
      */
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
