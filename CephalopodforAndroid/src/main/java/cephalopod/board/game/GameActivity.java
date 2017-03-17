@@ -51,23 +51,32 @@ public class GameActivity extends MenuActivity {
      */
     private int finishId = -1;
 
-    //TODO: Add comments;
+    /**
+     * Reference to save game button.
+     */
     private Button saveGame;
 
-    //TODO: Add comments;
+    /**
+     * Reference to load game button.
+     */
     private Button loadGame;
 
-    //TODO: Add comments
+    /**
+     * Reference to new game button.
+     */
     private Button newGame;
+
     /**
      * An instance of a board object.
      */
     private Board board = new Board();
+
     /**
      * Keep references to all image view components.
      */
     private ImageView images[][] = {{null, null, null, null, null}, {null, null, null, null, null},
             {null, null, null, null, null}, {null, null, null, null, null}, {null, null, null, null, null},};
+
     /**
      * Computer opponent thread.
      */
@@ -80,6 +89,7 @@ public class GameActivity extends MenuActivity {
          */
         @Override
         public void run() {
+
             /*
              * If the game is over there is no need bot to play.
 			 */
@@ -112,10 +122,12 @@ public class GameActivity extends MenuActivity {
             updateViews();
         }
     };
+
     /**
      * Cells on click listener.
      */
     private View.OnClickListener click = new View.OnClickListener() {
+
         /**
          * Listener sets an image with dice number for a cell after a valid move, checks for winner, updates board after a click
          * @param view
@@ -208,7 +220,6 @@ public class GameActivity extends MenuActivity {
     /**
      * Load game button on click listener
      */
-
     private View.OnClickListener load = new View.OnClickListener() {
         /**
          * {@inheritDoc}
@@ -253,6 +264,7 @@ public class GameActivity extends MenuActivity {
      * Update all visual controls.
      */
     private void updateViews() {
+
         /*
          * Play sound for game over.
 		 */
@@ -407,12 +419,14 @@ public class GameActivity extends MenuActivity {
          *
          */
         newGame.setOnClickListener(new View.OnClickListener() {
+
             /**
              * {@inheritDoc}
              */
             @Override
             public void onClick(View v) {
                 board.reset();
+
                 /*
              * Update user interface.
 			 */
