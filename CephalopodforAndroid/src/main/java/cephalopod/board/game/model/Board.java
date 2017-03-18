@@ -100,7 +100,6 @@ public class Board implements Serializable {
         if (cells[x][y].getType() != Type.EMPTY) {
             return false;
         }
-
         return true;
     }
 
@@ -184,15 +183,13 @@ public class Board implements Serializable {
         if (cells[x][y].getType() != Cell.Type.EMPTY) {
             return false;
         }
-
         int neighbours = neighbours(x, y);
-        if (neighbours == 0 || neighbours >= CAPTURE_IF_LESS) {
+        if (neighbours == 1 || neighbours == 0 || neighbours > CAPTURE_IF_LESS) {
             cells[x][y] = new Cell(Cell.Type.play(turn), Size.ONE);
         } else {
             cells[x][y] = new Cell(Cell.Type.play(turn), Size.instanceOf(neighbours));
             remove(x, y);
         }
-
         return true;
     }
 

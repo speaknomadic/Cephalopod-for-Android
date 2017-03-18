@@ -3,6 +3,7 @@ package cephalopod.board.game;
 import android.content.Context;
 import android.media.AudioManager;
 import android.media.SoundPool;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.os.Handler;
 import android.util.Log;
@@ -11,8 +12,6 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Toast;
-
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -51,28 +50,144 @@ public class GameActivity extends MenuActivity {
      */
     private int finishId = -1;
 
-    //TODO: Add comments;
+    /**
+     * Reference to save game button.
+     */
     private Button saveGame;
 
-    //TODO: Add comments;
+    /**
+     * Reference to load game button.
+     */
     private Button loadGame;
 
-    //TODO: Add comments
+    /**
+     * Reference to new game button.
+     */
     private Button newGame;
+
     /**
      * An instance of a board object.
      */
     private Board board = new Board();
+
     /**
      * Keep references to all image view components.
      */
     private ImageView images[][] = {{null, null, null, null, null}, {null, null, null, null, null},
             {null, null, null, null, null}, {null, null, null, null, null}, {null, null, null, null, null},};
+
+    /**
+     *
+     */
+    private class SaveDataTask extends AsyncTask<Void, Void, Void> {
+
+        /**
+         *
+         */
+        @Override
+        protected void onPreExecute() {
+            Message.message(GameActivity.this, "Saving game");
+        }
+
+        /**
+         *
+         */
+        @Override
+        protected Void doInBackground(Void... params) {
+            FileOutputStream fileOutputStream = null;
+            String FILENAME = "mygame.txt";
+            try {
+                fileOutputStream = GameActivity.this.openFileOutput(FILENAME, Context.MODE_PRIVATE);
+                ObjectOutputStream os = new ObjectOutputStream(fileOutputStream);
+                os.writeObject(board);
+            } catch (FileNotFoundException e) {
+                Log.d("FILE", "File not found");
+            } catch (IOException e) {
+                Log.d("FILE", "IOException" + e.toString());
+            } finally {
+                try {
+                    fileOutputStream.close();
+                } catch (IOException e) {
+                    Log.d("FILE", "IOException" + e.toString());
+                }
+            }
+            return null;
+        }
+    }
+
+    /**
+     *
+     *
+     */
+    private class LoadDataTask extends AsyncTask<String, Void, Void> {
+
+        /**
+         *
+         */
+        @Override
+        protected void onPreExecute() {
+            Message.message(GameActivity.this, "Loading game");
+        }
+
+        /**
+         * @param params
+         * @return
+         */
+        @Override
+        protected Void doInBackground(String... params) {
+            String file = params[0];
+            FileInputStream fileInputStream = null;
+            ObjectInputStream inputStream = null;
+
+            try {
+                fileInputStream = GameActivity.this.openFileInput("mygame.txt");
+                inputStream = new ObjectInputStream(fileInputStream);
+                board = (Board) inputStream.readObject();
+
+            } catch (FileNotFoundException e1) {
+                Log.d("FILE", "File not found");
+                ;
+            } catch (IOException e1) {
+                Log.d("FILE", "IOException" + e1.toString());
+            } catch (ClassNotFoundException e1) {
+                e1.printStackTrace();
+            } finally {
+                try {
+                    inputStream.close();
+                } catch (IOException e) {
+                    Log.d("FILE", "IOException" + e.toString());
+                }
+                try {
+                    fileInputStream.close();
+                } catch (IOException e) {
+                    Log.d("FILE", "IOException" + e.toString());
+                }
+                return null;
+            }
+        }
+
+        @Override
+        protected void onPostExecute(Void aVoid) {
+            runOnUiThread(new Runnable() {
+
+                @Override
+                public void run() {
+                    updateViews();
+                }
+            });
+        }
+
+    }
+
+
     /**
      * Computer opponent thread.
      */
     private Runnable ai = new Runnable() {
-        //TODO Add Java Doc comments.
+
+        /**
+         * Reference to an object from RandomArtificialIntelligence
+         */
         private ArtificialIntelligence bot = new RandomArtificialIntelligence();
 
         /**
@@ -80,6 +195,7 @@ public class GameActivity extends MenuActivity {
          */
         @Override
         public void run() {
+
             /*
              * If the game is over there is no need bot to play.
 			 */
@@ -112,19 +228,23 @@ public class GameActivity extends MenuActivity {
             updateViews();
         }
     };
+
     /**
      * Cells on click listener.
      */
     private View.OnClickListener click = new View.OnClickListener() {
+
         /**
          * Listener sets an image with dice number for a cell after a valid move, checks for winner, updates board after a click
+         *
          * @param view
          */
         @Override
         public void onClick(View view) {
-/*
+
+            /**
              * If the game is over there is nothing bot can do.
-			 */
+             */
             if (board.isGameOver() == true) {
                 return;
             }
@@ -165,94 +285,18 @@ public class GameActivity extends MenuActivity {
 
 			/*
              * Update user interface.
+             *
 			 */
             updateViews();
         }
     };
 
-    /**
-     * Save game button on click listener.
-     */
-
-    private View.OnClickListener save = new View.OnClickListener() {
-
-        /**
-         * {@inheritDoc}
-         */
-        @Override
-        public void onClick(View v) {
-            FileOutputStream fileOutputStream = null;
-            String FILENAME = "mygame.txt";
-            try {
-                fileOutputStream = GameActivity.this.openFileOutput(FILENAME, Context.MODE_PRIVATE);
-                ObjectOutputStream os = new ObjectOutputStream(fileOutputStream);
-                os.writeObject(board);
-                Message.message(GameActivity.this, "Your game was saved.");
-            } catch (FileNotFoundException e) {
-                Log.d("FILE", "File not found");
-                Message.message(GameActivity.this, "The file was not found.");
-            } catch (IOException e) {
-                Log.d("FILE", "IOException" + e.toString());
-                Message.message(GameActivity.this, "Saving game was unsuccessfull");
-            } finally {
-                try {
-                    fileOutputStream.close();
-                } catch (IOException e) {
-                    Log.d("FILE", "IOException" + e.toString());
-                    Message.message(GameActivity.this, "Saving game was unsuccessfull");
-                }
-            }
-        }
-    };
-
-    /**
-     * Load game button on click listener
-     */
-
-    private View.OnClickListener load = new View.OnClickListener() {
-        /**
-         * {@inheritDoc}
-         */
-        @Override
-        public void onClick(View v) {
-            FileInputStream fileInputStream = null;
-            ObjectInputStream inputStream = null;
-
-            try {
-                fileInputStream = GameActivity.this.openFileInput("mygame.txt");
-                inputStream = new ObjectInputStream(fileInputStream);
-                board = (Board) inputStream.readObject();
-
-                updateViews();
-            } catch (FileNotFoundException e1) {
-                Log.d("FILE", "File not found");
-                Message.message(GameActivity.this, "The file was not found.");
-            } catch (IOException e1) {
-                Log.d("FILE", "IOException" + e1.toString());
-                Message.message(GameActivity.this, "Loading game was unsuccessfull");
-            } catch (ClassNotFoundException e1) {
-                e1.printStackTrace();
-            } finally {
-                try {
-                    inputStream.close();
-                } catch (IOException e) {
-                    Log.d("FILE", "IOException" + e.toString());
-                    Message.message(GameActivity.this, "Loading game was unsuccessfull");
-                }
-                try {
-                    fileInputStream.close();
-                } catch (IOException e) {
-                    Log.d("FILE", "IOException" + e.toString());
-                    Message.message(GameActivity.this, "Loading game was unsuccessfull");
-                }
-            }
-        }
-    };
 
     /**
      * Update all visual controls.
      */
     private void updateViews() {
+
         /*
          * Play sound for game over.
 		 */
@@ -328,9 +372,10 @@ public class GameActivity extends MenuActivity {
          * Report game over.
 		 */
         if (board.isGameOver() == true) {
-            Toast.makeText(this, getResources().getString(R.string.game_over_message), Toast.LENGTH_LONG).show();
+            Message.message(GameActivity.this, getResources().getString(R.string.game_over_message));
         }
     }
+
 
     /**
      * {@inheritDoc}
@@ -382,9 +427,8 @@ public class GameActivity extends MenuActivity {
             }
         }
 
-
         /**
-         * Refers the save button;
+         * Reference to the the Save button;
          */
         saveGame = (Button) findViewById(R.id.button_save);
 
@@ -392,14 +436,38 @@ public class GameActivity extends MenuActivity {
          * As a user navigates out of our app on a click of save button the last game is saved to a file.
          *
          */
-        saveGame.setOnClickListener(save);
+        saveGame.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             * {@inheritDoc}
+             */
+            @Override
+            public void onClick(View v) {
+                SaveDataTask saveData = new SaveDataTask();
+                saveData.execute();
+            }
+        });
+
+
         loadGame = (Button) findViewById(R.id.button_load);
 
         /**
          * As a user navigates back to our app on a click of load button the last game is restored from a  file.
          *
          */
-        loadGame.setOnClickListener(load);
+        loadGame.setOnClickListener(new View.OnClickListener() {
+
+            /**
+             }
+             * {@inheritDoc}
+             */
+            @Override
+            public void onClick(View v) {
+                LoadDataTask loadData = new LoadDataTask();
+                loadData.execute("mygame.txt");
+            }
+        });
+
         newGame = (Button) findViewById(R.id.button_reset);
 
         /**
@@ -407,22 +475,20 @@ public class GameActivity extends MenuActivity {
          *
          */
         newGame.setOnClickListener(new View.OnClickListener() {
+
             /**
              * {@inheritDoc}
              */
             @Override
             public void onClick(View v) {
                 board.reset();
+
                 /*
              * Update user interface.
 			 */
                 updateViews();
             }
         });
-
-         /*
-     * Update screen.
-     */
         updateViews();
     }
 
