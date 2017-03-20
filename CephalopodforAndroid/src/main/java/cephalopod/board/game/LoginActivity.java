@@ -1,13 +1,13 @@
 package cephalopod.board.game;
 
 import android.content.Intent;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
-import android.widget.Toast;
 
 
 /**
@@ -56,6 +56,10 @@ public class LoginActivity extends AppCompatActivity {
     private Session session;
 
     /**
+     *
+     *
+     */
+    /**
      * {@inheritDoc}
      */
     @Override
@@ -80,7 +84,7 @@ public class LoginActivity extends AppCompatActivity {
         /**
          * Initalization of fields.
          */
-        db = new DbAdapter(this);
+        db = DbAdapter.getInstance(this);
         session = new Session(this);
         login = (Button) findViewById(R.id.login_button);
         signUp = (Button) findViewById(R.id.registration_button);
@@ -89,14 +93,16 @@ public class LoginActivity extends AppCompatActivity {
         usernameInsert = (EditText) findViewById(R.id.username_insert);
         passwordInsert = (EditText) findViewById(R.id.password_insert);
 
+
         /**
          * Setting onclickListeners to the buttons.
          */
         login.setOnClickListener(listener);
         signUp.setOnClickListener(listener);
 
+        //TODO: Add Java Doc Comments
         if (session.loggedIn()) {
-            Toast.makeText(this, "Logged in", Toast.LENGTH_SHORT).show();
+            Message.message(this, "User is loggedin");
         }
     }
 
@@ -105,14 +111,45 @@ public class LoginActivity extends AppCompatActivity {
      * User data is set as true in SharedPreferences database and redirected to game screen.
      */
     private void logIn() {
+
         String username = usernameInsert.getText().toString();
         String pass = passwordInsert.getText().toString();
-        if (db.getUser(username, pass)) {
-            session.setLoggedin(true);
-            startActivity(new Intent(LoginActivity.this, GameActivity.class));
-            Toast.makeText(this, "User Logged in", Toast.LENGTH_SHORT).show();
-        } else {
-            Toast.makeText(this, "Wrong username/password!", Toast.LENGTH_SHORT).show();
-        }
+
+
+        //TODO: Add Java Doc Comments
+        new AsyncTask<String, Void, Boolean>() {
+            /**
+             * Override this method to perform a computation on a background thread. The
+             * specified parameters are the parameters passed to {@link #execute}
+             * by the caller of this task.
+             * <p>
+             * This method can call {@link #publishProgress} to publish updates
+             * on the UI thread.
+             *
+             * @param params The parameters of the task.
+             * @return A result, defined by the subclass of this task.
+             * @see #onPreExecute()
+             * @see #onPostExecute
+             * @see #publishProgress
+             */
+
+            @Override
+            protected Boolean doInBackground(String... params) {
+                boolean result = db.getUser(params[0], params[1]);
+                return result;
+            }
+
+            @Override
+            protected void onPostExecute(Boolean result) {
+                if (result) {
+                    session.setLoggedin(true);
+                    startActivity(new Intent(LoginActivity.this, GameActivity.class));
+                    Message.message(LoginActivity.this, "User logged in!");
+                } else {
+                    Message.message(LoginActivity.this, "User not Logged in");
+                }
+            }
+        }.execute(username, pass);
     }
 }
+

@@ -1,6 +1,7 @@
 package cephalopod.board.game;
 
 import android.content.Context;
+import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.AsyncTask;
@@ -12,6 +13,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -32,7 +34,6 @@ public class GameActivity extends MenuActivity {
     /**
      * Handler instance associated with the bot thread
      */
-
     private final Handler handler = new Handler();
 
     /**
@@ -53,17 +54,19 @@ public class GameActivity extends MenuActivity {
     /**
      * Reference to save game button.
      */
-    private Button saveGame;
+    private Button save;
 
     /**
      * Reference to load game button.
      */
-    private Button loadGame;
+    private Button load;
 
     /**
      * Reference to new game button.
      */
     private Button newGame;
+
+    private Button exit;
 
     /**
      * An instance of a board object.
@@ -176,7 +179,6 @@ public class GameActivity extends MenuActivity {
                 }
             });
         }
-
     }
 
 
@@ -213,6 +215,7 @@ public class GameActivity extends MenuActivity {
 			/*
              * Bot generates move.The int array move contains coordinates x and y of the bot's move.
              */
+
             int move[] = bot.move(board.getCells(), Cell.Type.play(board.getTurn() % 2));
 
 			/*
@@ -225,9 +228,21 @@ public class GameActivity extends MenuActivity {
                 }
                 board.next();
             }
-            updateViews();
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    updateViews();
+                }
+            });
+
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     };
+
 
     /**
      * Cells on click listener.
@@ -252,9 +267,9 @@ public class GameActivity extends MenuActivity {
 			/*
              * If the human player has turn also nothing to be done.
 			 */
-            if (board.getTurn() % 2 != 0) {
-                return;
-            }
+//            if (board.getTurn() % 2 != 0) {
+//                return;
+//            }
 
 			/*
              * Play a human move.
@@ -279,7 +294,7 @@ public class GameActivity extends MenuActivity {
                 } else {
                     sounds.play(clickId, 0.99f, 0.99f, 0, 0, 1);
                     board.next();
-                    handler.postDelayed(ai, 500);
+                    handler.postDelayed(ai, 300);
                 }
             }
 
@@ -287,7 +302,12 @@ public class GameActivity extends MenuActivity {
              * Update user interface.
              *
 			 */
-            updateViews();
+            runOnUiThread(new Runnable() {
+                @Override
+                public void run() {
+                    updateViews();
+                }
+            });
         }
     };
 
@@ -376,7 +396,6 @@ public class GameActivity extends MenuActivity {
         }
     }
 
-
     /**
      * {@inheritDoc}
      */
@@ -428,15 +447,28 @@ public class GameActivity extends MenuActivity {
         }
 
         /**
+         * Reference to the the Exit button;
+         */
+        exit = (Button) findViewById(R.id.button_exit);
+
+        //TODO:Add Java Doc Comment
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(GameActivity.this, WelcomeActivity.class));
+            }
+        });
+
+        /**
          * Reference to the the Save button;
          */
-        saveGame = (Button) findViewById(R.id.button_save);
+        save = (Button) findViewById(R.id.button_save);
 
         /**
          * As a user navigates out of our app on a click of save button the last game is saved to a file.
          *
          */
-        saveGame.setOnClickListener(new View.OnClickListener() {
+        save.setOnClickListener(new View.OnClickListener() {
 
             /**
              * {@inheritDoc}
@@ -448,14 +480,13 @@ public class GameActivity extends MenuActivity {
             }
         });
 
-
-        loadGame = (Button) findViewById(R.id.button_load);
+        load = (Button) findViewById(R.id.button_load);
 
         /**
          * As a user navigates back to our app on a click of load button the last game is restored from a  file.
          *
          */
-        loadGame.setOnClickListener(new View.OnClickListener() {
+        load.setOnClickListener(new View.OnClickListener() {
 
             /**
              }
@@ -486,7 +517,12 @@ public class GameActivity extends MenuActivity {
                 /*
              * Update user interface.
 			 */
-                updateViews();
+                runOnUiThread(new Runnable() {
+                    @Override
+                    public void run() {
+                        updateViews();
+                    }
+                });
             }
         });
         updateViews();
@@ -535,7 +571,13 @@ public class GameActivity extends MenuActivity {
     protected void onRestoreInstanceState(Bundle savedInstanceState) {
         super.onRestoreInstanceState(savedInstanceState);
         board = (Board) savedInstanceState.getSerializable("board");
-        updateViews();
+        runOnUiThread(new Runnable() {
+
+            @Override
+            public void run() {
+                updateViews();
+            }
+        });
     }
 }
 
