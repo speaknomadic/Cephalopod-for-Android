@@ -107,14 +107,14 @@ public class SignUpActivity extends AppCompatActivity {
         pass = passInsert.getText().toString();
         confirm = confirmPassInsert.getText().toString();
 
-        if (username.isEmpty() || pass.isEmpty() || confirm.isEmpty()) {
-            Message.message(this, "Some fields are empty!");
-            return false;
-        }
-        if (!pass.equals(confirm)) {
-            Message.message(this, "Two passwords are not identical!");
-            return false;
-        }
+        long id = dbhelper.insertData(username, pass);
+        if (id < 0 || username.isEmpty() || pass.isEmpty() || confirm.isEmpty()|| pass.equals(confirm)) {
+            Message.message(this, "Some fields are empty, or confirm password is different from password!");
+          return false;
+        } else {
+            Message.message(this, "User Registered");
+            startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
+
 
         new AsyncTask<String, Void, Long>() {
             /**
@@ -151,5 +151,4 @@ public class SignUpActivity extends AppCompatActivity {
 
 //TODO: validation helper method to check if data is valid and confirmPassword is the same is passInsert
     }
-
 }
