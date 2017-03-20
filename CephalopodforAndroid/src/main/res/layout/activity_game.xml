@@ -9,7 +9,7 @@
         android:layout_weight="1"
         android:background="@color/blue"
         android:orientation="vertical"
-        android:paddingTop="10dp">
+        android:paddingTop="@dimen/linear_layout">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -17,14 +17,13 @@
             android:layout_weight="1"
             android:background="@color/blue"
             android:orientation="horizontal"
-            android:paddingTop="10dp">
-
+            android:paddingTop="@dimen/inner_linear_layout">
 
             <Button
                 android:id="@+id/button_save"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/button_save_layout_margin"
                 android:layout_weight="1"
                 android:text="@string/button_save_text" />
 
@@ -32,7 +31,7 @@
                 android:id="@+id/button_load"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/button_load_layout_margin"
                 android:layout_weight="1"
                 android:text="@string/button_load_text" />
 
@@ -40,33 +39,16 @@
                 android:id="@+id/button_reset"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
+                android:layout_margin="@dimen/button_reset_layout_margin"
                 android:layout_weight="1"
                 android:text="@string/new_game" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:background="@color/blue"
-            android:orientation="horizontal"
-            android:paddingTop="10dp">
-
-            <Button
-                android:id="@+id/button_score"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                android:layout_weight="1"
-                android:text="@string/button_score" />
         </LinearLayout>
     </LinearLayout>
 
     <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
         android:layout_height="0dp"
-        android:layout_weight="9"
+        android:layout_weight="8"
         android:background="@color/blue"
         android:paddingLeft="20dp">
 
@@ -320,4 +302,23 @@
             android:layout_marginTop="250dp"
             android:src="@drawable/empty" />
     </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/blue"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/button_exit"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="60dp"
+            android:layout_marginRight="60dp"
+            android:layout_weight="1"
+            android:text="@string/button_exit" />
+    </LinearLayout>
+
 </LinearLayout>

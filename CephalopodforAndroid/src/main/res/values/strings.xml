@@ -20,6 +20,6 @@
     <string name="button_save_text">Save</string>
     <string name="button_load_text">Load</string>
     <string name="new_game">New</string>
-    <string name="button_score">Score</string>
+    <string name="button_exit">Exit</string>
 
 </resources>

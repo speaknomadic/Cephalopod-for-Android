@@ -29,8 +29,20 @@ public class DbAdapter {
      * @param context
      */
 
-    public DbAdapter(Context context) {
+    //TODO:
+    private static DbAdapter uniqueInstance;
+
+    //TODO:
+    private DbAdapter(Context context) {
         helper = new DbHelper(context);
+    }
+
+    //TODO:
+    public static synchronized DbAdapter getInstance(Context context) {
+        if (uniqueInstance == null) {
+            uniqueInstance = new DbAdapter(context);
+        }
+        return uniqueInstance;
     }
 
     /**
@@ -138,7 +150,7 @@ public class DbAdapter {
             int index2 = cursor.getColumnIndex(DbHelper.COLUMN_PASS);
             String personUsername = cursor.getString(index1);
             String pass = cursor.getString(index2);
-            buffer.append(username + " " + pass + "\n");
+            buffer.append(personUsername + " " + pass + "\n");
         }
         return buffer.toString();
     }
@@ -151,7 +163,10 @@ public class DbAdapter {
      * @return
      */
     public boolean getUser(String username, String pass) {
-        String details = username + " " + pass + "\n";
+        String details = "";
+        if (!username.isEmpty() && (!pass.isEmpty())) {
+            details = username + " " + pass + "\n";
+        }
         if (details.equals(getData(username))) {
             return true;
         }
@@ -211,6 +226,7 @@ public class DbAdapter {
          */
         private Context context;
 
+
         /**
          * Declaration of constructor the supertype class. Object is responsible for the creation of database and
          * editing of database. Constructor takes context as parameter.
@@ -219,10 +235,12 @@ public class DbAdapter {
          *
          * @param context
          */
+
         public DbHelper(Context context) {
             super(context, DB_NAME, null, DB_VERSION);
             this.context = context;
         }
+
 
         /**
          * {@inheritDoc}
@@ -275,4 +293,3 @@ public class DbAdapter {
         }
     }
 }
-

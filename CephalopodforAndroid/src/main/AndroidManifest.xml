@@ -17,28 +17,29 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/Theme.AppCompat.Light">
+
         <activity
             android:name=".GameActivity"
             android:label="@string/title_activity_game"
-            android:theme="@style/AppTheme">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
+            android:theme="@style/AppTheme" />
 
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
         <activity
             android:name=".LoginActivity"
             android:label="@string/title_login_activity" />
+
         <activity
             android:name=".SignUpActivity"
-            android:label="@string/title_signup_activity" />
+            android:label="@string/title_signup_activity">
+
+        </activity>
+
+        <activity android:name=".WelcomeActivity">
 
         <intent-filter>
-            <category android:name="android.intent.category.DEFAULT" />
+            <action android:name="android.intent.action.MAIN" />
+            <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
-
-        <activity android:name=".WelcomeActivity" />
+        </activity>
         <activity
             android:name=".AboutActivity"
             android:label="@string/title_about_activity" />
@@ -48,7 +49,9 @@
         <activity
             android:name=".SettingsActivity"
             android:label="@string/title_settings_activity" />
-        <activity android:name=".MenuActivity"></activity>
+        <activity
+            android:name=".MenuActivity"
+            android:label="Menu" />
     </application>
 
 </manifest>

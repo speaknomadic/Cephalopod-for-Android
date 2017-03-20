@@ -2,6 +2,7 @@ package cephalopod.board.game;
 
 import android.content.Context;
 import android.content.SharedPreferences;
+import android.os.AsyncTask;
 
 /**
  * Created by vladimircvetanov on 11.03.17.
@@ -57,16 +58,36 @@ public class Session {
      * @param loggedin
      */
     public void setLoggedin(boolean loggedin) {
-        editor.putBoolean("loggedInmode", loggedin);
+        new AsyncTask<Boolean, Void, Void>() {
+            /**
+             * Override this method to perform a computation on a background thread. The
+             * specified parameters are the parameters passed to {@link #execute}
+             * by the caller of this task.
+             * <p>
+             * This method can call {@link #publishProgress} to publish updates
+             * on the UI thread.
+             *
+             * @param params The parameters of the task.
+             * @return A result, defined by the subclass of this task.
+             * @see #onPreExecute()
+             * @see #onPostExecute
+             * @see #publishProgress
+             */
+            @Override
+            protected Void doInBackground(Boolean... params) {
+                editor.putBoolean("loggedInmode", params[0]);
+                /**
+                 * Commit changes.
+                 */
+                editor.commit();
+                return null;
+            }
+        }.execute(loggedin);
 
-        /**
-         * Commit changes.
-         */
-        editor.commit();
     }
 
     /**
-     * Reference to the Shared Preference and the key are used to load values by key is String. If user is logged it returns true. Else returns a default value false.
+     * Reference to the Shared Preference and the key are used to load values by key is String. If user is logged it returns true.
      *
      * @return boolean
      */
