@@ -66,12 +66,9 @@
              android:layout_gravity="center"
              android:background="@drawable/shadow"
              android:fontFamily="@string/app_name"
-             android:onClick="back"
              android:text="Back"
              android:textColor="@color/darkGrey"
              android:textSize="20sp"
-
-
              />
      </LinearLayout>
     </ScrollView>

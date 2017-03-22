@@ -14,6 +14,12 @@ import android.widget.TextView;
  */
 public class SignUpActivity extends AppCompatActivity {
 
+    //TODO: Add Java Doc Comments
+    private static final int RESULT_CODE_CANCELED = 5;
+
+    //TODO: Add Java Doc Comments
+    private static final int RESULT_CODE_SUCCESS = 3;
+
     /**
      * Reference to TextView object with text username.
      */
@@ -52,12 +58,22 @@ public class SignUpActivity extends AppCompatActivity {
     /**
      * Reference for button object for logging in.
      */
-    private Button logIn;
+    private Button cancel;
 
     /**
      * Reference to the Database adapter object.
      */
     private DbAdapter dbhelper;
+
+    //TODO: Add Java Doc Comments
+    public static int getResultCodeCanceled() {
+        return RESULT_CODE_CANCELED;
+    }
+
+    //TODO: Add Java Doc Comments
+    public static int getResultCodeSuccess() {
+        return RESULT_CODE_SUCCESS;
+    }
 
     /**
      * {@inheritDoc}
@@ -75,7 +91,7 @@ public class SignUpActivity extends AppCompatActivity {
         passInsert = (EditText) findViewById(R.id.signuppassword_insert);
         confirmPassInsert = (EditText) findViewById(R.id.signupconfirmpass_insert);
         signUp = (Button) findViewById(R.id.signupregistration_button);
-        logIn = (Button) findViewById(R.id.signuploggin_button);
+        cancel = (Button) findViewById(R.id.signupcancel_button);
 
         /**
          * Setting onclickListeners to the buttons.
@@ -86,16 +102,22 @@ public class SignUpActivity extends AppCompatActivity {
                 switch (v.getId()) {
                     case R.id.signupregistration_button:
                         addUser();
+                        //return added data and a result code
+                        Intent intent = new Intent();
+                        intent.putExtra("user", usernameInsert.getText().toString());
+                        intent.putExtra("pass", passInsert.getText().toString());
+                        setResult(RESULT_CODE_SUCCESS, intent);//ok
+                        finish();
                         break;
-                    case R.id.signuploggin_button:
-                        startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
+                    case R.id.signupcancel_button:
+                        startActivity(new Intent(SignUpActivity.this, WelcomeActivity.class));
                         break;
                     default:
                 }
             }
         };
         signUp.setOnClickListener(listener);
-        logIn.setOnClickListener(listener);
+        cancel.setOnClickListener(listener);
     }
 
     /**
@@ -148,8 +170,5 @@ public class SignUpActivity extends AppCompatActivity {
             }
         }.execute(username, pass);
         return true;
-
-//TODO: validation helper method to check if data is valid and confirmPassword is the same is passInsert
     }
-
 }
