@@ -129,46 +129,55 @@ public class SignUpActivity extends AppCompatActivity {
         pass = passInsert.getText().toString();
         confirm = confirmPassInsert.getText().toString();
 
-        if (username.isEmpty() || pass.isEmpty() || confirm.isEmpty()) {
-            Message.message(this, "Some fields are empty!");
+        long id = dbhelper.insertData(username, pass);
+        if (id < 0 || username.isEmpty() || pass.isEmpty() || confirm.isEmpty() || pass.equals(confirm)) {
+            Message.message(this, "Some fields are empty, or confirm password is different from password!");
             return false;
-        }
-        if (!pass.equals(confirm)) {
-            Message.message(this, "Two passwords are not identical!");
-            return false;
-        }
-
-        new AsyncTask<String, Void, Long>() {
-            /**
-             * Override this method to perform a computation on a background thread. The
-             * specified parameters are the parameters passed to {@link #execute}
-             * by the caller of this task.
-             * <p>
-             * This method can call {@link #publishProgress} to publish updates
-             * on the UI thread.
-             *
-             * @param params The parameters of the task.
-             * @return A result, defined by the subclass of this task.
-             * @see #onPreExecute()
-             * @see #onPostExecute
-             * @see #publishProgress
-             */
-            @Override
-            protected Long doInBackground(String... params) {
-                long id = dbhelper.insertData(params[0], params[1]);
-                return id;
-            }
+        } else {
+            Message.message(this, "User Registered");
+            startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
 
 
-            @Override
-            protected void onPostExecute(Long id) {
-                if (id < 0) {
-                    Message.message(SignUpActivity.this, "Registration was not successful!");
-                } else {
-                    startActivity(new Intent(SignUpActivity.this, GameActivity.class));
+            new AsyncTask<String, Void, Long>() {
+                /**
+                 * Override this method to perform a computation on a background thread. The
+                 * specified parameters are the parameters passed to {@link #execute}
+                 * by the caller of this task.
+                 * <p>
+                 * This method can call {@link #publishProgress} to publish updates
+                 * on the UI thread.
+                 *
+                 * @param params The parameters of the task.
+                 * @return A result, defined by the subclass of this task.
+                 * @see #onPreExecute()
+                 * @see #onPostExecute
+                 * @see #publishProgress
+                 */
+                @Override
+                protected Long doInBackground(String... params) {
+                    long id = dbhelper.insertData(params[0], params[1]);
+                    return id;
                 }
+
+
+                @Override
+                protected void onPostExecute(Long id) {
+                    if (id < 0) {
+                        Message.message(SignUpActivity.this, "Registration was not successful!");
+                    } else {
+                        startActivity(new Intent(SignUpActivity.this, GameActivity.class));
+                    }
+                }
+<<<<<<< HEAD
             }
         }.execute(username, pass);
         return true;
+=======
+            }.execute(username, pass);
+            return true;
+
+//TODO: validation helper method to check if data is valid and confirmPassword is the same is passInsert
+        }
+>>>>>>> 3aae64fac49474755e84d000f4a852b428b2310f
     }
 }
