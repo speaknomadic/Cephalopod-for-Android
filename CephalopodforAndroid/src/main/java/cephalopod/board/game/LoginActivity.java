@@ -116,6 +116,7 @@ public class LoginActivity extends AppCompatActivity {
         String pass = passwordInsert.getText().toString();
 
 
+
         //TODO: Add Java Doc Comments
         new AsyncTask<String, Void, Boolean>() {
             /**
