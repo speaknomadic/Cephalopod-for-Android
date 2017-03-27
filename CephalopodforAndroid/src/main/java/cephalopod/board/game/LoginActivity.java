@@ -74,7 +74,8 @@ public class LoginActivity extends AppCompatActivity {
                         logIn();
                         break;
                     case R.id.registration_button:
-                        startActivity(new Intent(LoginActivity.this, SignUpActivity.class));
+                        Intent intent = new Intent(LoginActivity.this, SignUpActivity.class);
+                        startActivityForResult(intent, 1);
                         break;
                     default:
                 }
@@ -150,6 +151,19 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         }.execute(username, pass);
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        if (resultCode == SignUpActivity.getResultCodeCanceled()) {
+            Message.message(LoginActivity.this, "User did not register");
+        }
+        if (resultCode == SignUpActivity.getResultCodeSuccess()) {
+            if (data != null) {
+                usernameInsert.setText(data.getStringExtra("user"));
+                passwordInsert.setText(data.getStringExtra("pass"));
+            }
+        }
     }
 }
 
