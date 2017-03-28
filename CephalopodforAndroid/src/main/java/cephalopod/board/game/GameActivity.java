@@ -1,7 +1,6 @@
 package cephalopod.board.game;
 
 import android.content.Context;
-import android.content.Intent;
 import android.media.AudioManager;
 import android.media.SoundPool;
 import android.os.AsyncTask;
@@ -13,6 +12,7 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
@@ -66,7 +66,25 @@ public class GameActivity extends MenuActivity {
      */
     private Button newGame;
 
-    private Button exit;
+    /**
+     * Reference to score TextView of human player.
+     */
+    private TextView yourScore;
+
+    /**
+     * Reference to score TextView of bot player.
+     */
+    private TextView opponentScore;
+
+    /**
+     * Reference to dynamic score with points of human player.
+     */
+    private TextView yourScorePoints;
+
+    /**
+     * Reference to the dynamic score with points of bot player.
+     */
+    private TextView opponentScorePoints;
 
     /**
      * An instance of a board object.
@@ -85,7 +103,7 @@ public class GameActivity extends MenuActivity {
     private class SaveDataTask extends AsyncTask<Void, Void, Void> {
 
         /**
-         *
+         * {@inheritDoc}
          */
         @Override
         protected void onPreExecute() {
@@ -93,7 +111,7 @@ public class GameActivity extends MenuActivity {
         }
 
         /**
-         *
+         * {@inheritDoc}
          */
         @Override
         protected Void doInBackground(Void... params) {
@@ -119,13 +137,12 @@ public class GameActivity extends MenuActivity {
     }
 
     /**
-     *
-     *
+     * Loading game data from a file is done in an AsyncTask.
      */
     private class LoadDataTask extends AsyncTask<String, Void, Void> {
 
         /**
-         *
+         * {@inheritDoc}
          */
         @Override
         protected void onPreExecute() {
@@ -133,8 +150,7 @@ public class GameActivity extends MenuActivity {
         }
 
         /**
-         * @param params
-         * @return
+         * {@inheritDoc}
          */
         @Override
         protected Void doInBackground(String... params) {
@@ -169,6 +185,9 @@ public class GameActivity extends MenuActivity {
             }
         }
 
+        /**
+         * {@inheritDoc}
+         */
         @Override
         protected void onPostExecute(Void aVoid) {
             runOnUiThread(new Runnable() {
@@ -214,7 +233,6 @@ public class GameActivity extends MenuActivity {
 			/*
              * Bot generates move.The int array move contains coordinates x and y of the bot's move.
              */
-
             int move[] = bot.move(board.getCells(), Cell.Type.play(board.getTurn() % 2));
 
 			/*
@@ -228,6 +246,10 @@ public class GameActivity extends MenuActivity {
                 board.next();
             }
             runOnUiThread(new Runnable() {
+
+                /**
+                 * {@inheritDoc}
+                 */
                 @Override
                 public void run() {
                     updateViews();
@@ -383,12 +405,17 @@ public class GameActivity extends MenuActivity {
                 }
             }
         }
+        /**
+         * Announce score of players.
+         */
+        yourScorePoints.setText(board.score().get(Cell.Type.RED) + "");
+        opponentScorePoints.setText(board.score().get(Cell.Type.BLUE) + "");
 
-		/*
+        /*
          * Report game over.
 		 */
         if (board.isGameOver() == true) {
-            Message.message(GameActivity.this, getResources().getString(R.string.game_over_message));
+            Message.message(this, getResources().getString(R.string.game_over_message));
         }
     }
 
@@ -441,21 +468,6 @@ public class GameActivity extends MenuActivity {
                 images[i][j].setOnClickListener(click);
             }
         }
-
-        /**
-         * Reference to the the Exit button.
-         */
-        exit = (Button) findViewById(R.id.button_exit);
-
-        /**
-         * Listener to the exit button.
-         */
-        exit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(GameActivity.this, WelcomeActivity.class));
-            }
-        });
 
         /**
          * Reference to the the Save button;
@@ -511,7 +523,6 @@ public class GameActivity extends MenuActivity {
             @Override
             public void onClick(View v) {
                 board.reset();
-
                 /*
              * Update user interface.
 			 */
@@ -523,6 +534,22 @@ public class GameActivity extends MenuActivity {
                 });
             }
         });
+
+        /**
+         * TextViews for score set to objects
+         */
+        yourScore = (TextView) findViewById(R.id.your_score);
+        opponentScore = (TextView) findViewById(R.id.opponent_score);
+
+        /**
+         * TextViews for score update set to objects
+         */
+        yourScorePoints = (TextView) findViewById(R.id.your_score_points);
+        opponentScorePoints = (TextView) findViewById(R.id.opponent_score_points);
+
+        /**
+         * Update Game screen.
+         */
         updateViews();
     }
 
@@ -570,7 +597,9 @@ public class GameActivity extends MenuActivity {
         super.onRestoreInstanceState(savedInstanceState);
         board = (Board) savedInstanceState.getSerializable("board");
         runOnUiThread(new Runnable() {
-
+            /**
+             * {@inheritDoc}
+             */
             @Override
             public void run() {
                 updateViews();
