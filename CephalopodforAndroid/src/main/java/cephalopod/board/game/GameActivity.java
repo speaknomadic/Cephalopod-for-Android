@@ -181,7 +181,6 @@ public class GameActivity extends MenuActivity {
         }
     }
 
-
     /**
      * Computer opponent thread.
      */
@@ -234,7 +233,6 @@ public class GameActivity extends MenuActivity {
                     updateViews();
                 }
             });
-
             try {
                 Thread.sleep(100);
             } catch (InterruptedException e) {
@@ -242,7 +240,6 @@ public class GameActivity extends MenuActivity {
             }
         }
     };
-
 
     /**
      * Cells on click listener.
@@ -310,7 +307,6 @@ public class GameActivity extends MenuActivity {
             });
         }
     };
-
 
     /**
      * Update all visual controls.
@@ -447,11 +443,13 @@ public class GameActivity extends MenuActivity {
         }
 
         /**
-         * Reference to the the Exit button;
+         * Reference to the the Exit button.
          */
         exit = (Button) findViewById(R.id.button_exit);
 
-        //TODO:Add Java Doc Comment
+        /**
+         * Listener to the exit button.
+         */
         exit.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
