@@ -18,7 +18,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DbAdapter {
 
     /**
-     * Declaration of fields of the adapter class. A reference to innerclass will executes queries.
+     * Declaration of fields of the adapter class. A reference to innerclass will be used in order to execute queries to the database.
      */
     private DbHelper helper;
 
@@ -29,15 +29,27 @@ public class DbAdapter {
      * @param context
      */
 
-    //TODO:
+    /**
+     * Singleton Pattern is used to instantiate a unique instance of the Database Adapter in order to use one database instance for the whole app.
+     */
     private static DbAdapter uniqueInstance;
 
-    //TODO:
+    /**
+     * Constructor of the Database adapter. The the outer class field: reference of inner DbHelper class is instantiated with context parameter.
+     *
+     * @param context
+     */
     private DbAdapter(Context context) {
         helper = new DbHelper(context);
     }
 
-    //TODO:
+
+    /**
+     * A method to create a unique instance of the Database adapter.
+     *
+     * @param context
+     * @return
+     */
     public static synchronized DbAdapter getInstance(Context context) {
         if (uniqueInstance == null) {
             uniqueInstance = new DbAdapter(context);
@@ -46,7 +58,7 @@ public class DbAdapter {
     }
 
     /**
-     * A method used to insert data
+     * A method used to insert data in database.
      *
      * @param username
      * @param password
@@ -122,6 +134,8 @@ public class DbAdapter {
     }
 
     /**
+     * Method which is used to get data about users from the database.
+     *
      * @param username
      * @return
      */
@@ -132,6 +146,7 @@ public class DbAdapter {
          *
          */
         SQLiteDatabase db = helper.getWritableDatabase();
+
         /**
          * select username,pass from CEPHALOPOD table
          */
@@ -184,14 +199,17 @@ public class DbAdapter {
          * Definition of unique for the application database name. Specify a String constant.
          */
         private static final String DB_NAME = "cephalopod.db";
+
         /**
          * Definition of the database's table name. Specify a String constant.
          */
         private static final String TABLE_NAME = "CEPHALOPOD";
+
         /**
          * Constant String SQL statement for erasing old version of table.
          */
         public static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
+
         /**
          * Definition of database version int constant.When database is changed version should be modified to next int.
          */
@@ -226,7 +244,6 @@ public class DbAdapter {
          */
         private Context context;
 
-
         /**
          * Declaration of constructor the supertype class. Object is responsible for the creation of database and
          * editing of database. Constructor takes context as parameter.
@@ -240,7 +257,6 @@ public class DbAdapter {
             super(context, DB_NAME, null, DB_VERSION);
             this.context = context;
         }
-
 
         /**
          * {@inheritDoc}

@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-
 /**
  * Login Screen
  */
@@ -56,10 +55,6 @@ public class LoginActivity extends AppCompatActivity {
     private Session session;
 
     /**
-     *
-     *
-     */
-    /**
      * {@inheritDoc}
      */
     @Override
@@ -94,7 +89,6 @@ public class LoginActivity extends AppCompatActivity {
         usernameInsert = (EditText) findViewById(R.id.username_insert);
         passwordInsert = (EditText) findViewById(R.id.password_insert);
 
-
         /**
          * Setting onclickListeners to the buttons.
          */
@@ -112,12 +106,12 @@ public class LoginActivity extends AppCompatActivity {
      * User data is set as true in SharedPreferences database and redirected to game screen.
      */
     private void logIn() {
-
         String username = usernameInsert.getText().toString();
         String pass = passwordInsert.getText().toString();
 
-
-        //TODO: Add Java Doc Comments
+        /**
+         * Calls to the get data from the database are executed on a background thread with anonymous class Asynctask.
+         */
         new AsyncTask<String, Void, Boolean>() {
             /**
              * Override this method to perform a computation on a background thread. The
@@ -134,12 +128,18 @@ public class LoginActivity extends AppCompatActivity {
              * @see #publishProgress
              */
 
+            /**
+             * {@inheritDoc}
+             */
             @Override
             protected Boolean doInBackground(String... params) {
                 boolean result = db.getUser(params[0], params[1]);
                 return result;
             }
 
+            /**
+             * {@inheritDoc}
+             */
             @Override
             protected void onPostExecute(Boolean result) {
                 if (result) {
@@ -153,6 +153,9 @@ public class LoginActivity extends AppCompatActivity {
         }.execute(username, pass);
     }
 
+    /**
+     * {@inheritDoc}
+     */
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         if (resultCode == SignUpActivity.getResultCodeCanceled()) {
@@ -163,7 +166,10 @@ public class LoginActivity extends AppCompatActivity {
                 usernameInsert.setText(data.getStringExtra("user"));
                 passwordInsert.setText(data.getStringExtra("pass"));
             }
+        } else {
+            startActivity(new Intent(LoginActivity.this, WelcomeActivity.class));
         }
     }
 }
+
 

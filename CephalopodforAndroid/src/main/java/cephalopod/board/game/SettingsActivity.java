@@ -13,6 +13,9 @@ import android.widget.Toast;
  */
 public class SettingsActivity extends Activity {
 
+    /**
+     * Reference to Radiogroup.
+     */
     RadioGroup radioGroup;
 
     /**
