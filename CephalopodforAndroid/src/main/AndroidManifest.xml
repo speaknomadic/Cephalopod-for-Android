@@ -43,13 +43,16 @@
         </activity>
         <activity
             android:name=".AboutActivity"
-            android:label="@string/title_about_activity" />
+            android:label="@string/title_about_activity"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".RulesActivity"
-            android:label="@string/title_rules_activity" />
+            android:label="@string/title_rules_activity"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".SettingsActivity"
-            android:label="@string/title_settings_activity" />
+            android:label="@string/title_settings_activity"
+            android:theme="@style/AppTheme"/>
         <activity
             android:name=".MenuActivity"
             android:label="Menu" />
