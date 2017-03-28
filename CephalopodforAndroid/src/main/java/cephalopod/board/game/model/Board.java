@@ -270,6 +270,7 @@ public class Board implements Serializable {
         for (Type type : Type.values()) {
             result.put(type, 0);
         }
+
         /*
          * Count occupied cells.
 		 */
