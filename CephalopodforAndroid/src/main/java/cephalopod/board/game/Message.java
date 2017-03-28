@@ -8,9 +8,8 @@ import android.widget.Toast;
  */
 
 /**
- * Class with a static method which prints Toast with the context, message and shows .
+ * Class with a static method which prints Toast with the context and message..
  */
-
 public class Message {
     public static void message(Context context, String message) {
         Toast.makeText(context, message, Toast.LENGTH_SHORT).show();

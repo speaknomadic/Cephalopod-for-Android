@@ -15,6 +15,9 @@ import android.widget.Toast;
  */
 public class SettingsActivity extends MenuActivity {
 
+    /**
+     * Reference to Radiogroup.
+     */
     RadioGroup radioGroup;
 
 

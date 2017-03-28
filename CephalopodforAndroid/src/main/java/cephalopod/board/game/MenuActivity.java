@@ -7,7 +7,9 @@ import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
 
-//TODO: Java doc comments
+/**
+ * MenuActivity class extended by all activities which have menu. Menu can be applied to all screens without code much code crepetition.
+ */
 public class MenuActivity extends Activity {
 
     /**

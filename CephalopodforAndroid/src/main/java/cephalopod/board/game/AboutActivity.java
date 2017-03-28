@@ -13,7 +13,11 @@ import android.widget.Button;
  */
 public class AboutActivity extends MenuActivity {
 
+    /**
+     * Return to Game screen.
+     */
     private Button back;
+
     /**
      * {@inheritDoc}
      */
@@ -22,13 +26,13 @@ public class AboutActivity extends MenuActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_about);
 
-        back = (Button)findViewById(R.id.aboutBack_button);
+        back = (Button) findViewById(R.id.aboutBack_button);
 
-        View.OnClickListener listener= new View.OnClickListener(){
+        View.OnClickListener listener = new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(AboutActivity.this,GameActivity.class));
+                startActivity(new Intent(AboutActivity.this, GameActivity.class));
             }
         };
 

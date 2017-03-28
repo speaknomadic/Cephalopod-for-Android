@@ -11,6 +11,7 @@ import cephalopod.board.game.model.Cell.Type;
  * Board class which instantiates a board object. The board contains all cells and methods to play the game. The board object is instantiated in the GameActivity to connect methods from GUI and logic.
  */
 public class Board implements Serializable {
+
     /**
      * Height size in rows.
      */
