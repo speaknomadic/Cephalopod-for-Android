@@ -22,5 +22,28 @@
     <string name="new_game">New</string>
     <string name="button_exit">Exit</string>
     <string name="more_menu">Read more online</string>
+    <string name="log_out">Log out</string>
+    <string name="rules_first_section">  \n Cephalopod is a two player game.
 
+      \n BASIC PLACEMENT 
+
+      \n Players take turns adding dice of their own color to the board, one die per turn. Dice are never moved from one square to another. Players cannot pass on their turn.</string>
+    <string name="rules_second_section">
+
+        \n OBJECT OF THE GAME 
+
+      \n Once the board has been completely filled, the player whose dice occupy the majority of the squares wins. </string>
+    <string name="rules_third_section">\n  CAPTURING PLACEMENT 
+
+        \n If a die is placed horizontally or vertically adjacent to two dice, and the sum of the pip counts on those two dice is six or less, then the currently played die must equal the sum of its two adjacent dice. The currently played die will remove those two dice from the board immediately, while it is still his turn.  Dice of either or both colors can be captured by a die of either color. Captured dice are set aside and reclaimed by their owners. </string>
+    <string name="rules_fourth_section">
+
+        \n  NON-CAPTURING PLACEMENT
+
+       \n A player can make a non-capturing placement simply by adding a die to a square from which no captures are possible. Non-capturing placements must show a value of one.Players always begin their turn by adding a die. Only dice which are horizontal or verticla to the currently added die, and whose pip sum equals the value of the currently added die may be removed during the current turn.</string>
+    <string name="rules_fifth_section">
+
+        \n CAPTURING PLACEMENT OF MORE THEN TWO DICE
+
+       \n If a die is placed adjacent to three or four dice, and if two, three, or four of its adjacent dice have a pip sum of six or less, then two, three, or four of those dice (whose pip sum is six or less) must be removed, and the played die must show the pip sum of the removed dice.</string>
 </resources>
