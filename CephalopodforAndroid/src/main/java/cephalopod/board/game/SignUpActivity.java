@@ -14,10 +14,14 @@ import android.widget.TextView;
  */
 public class SignUpActivity extends AppCompatActivity {
 
-    //TODO: Add Java Doc Comments
+    /**
+     * Constant to be returned for  result to Login Activity in case of cancellation.
+     */
     private static final int RESULT_CODE_CANCELED = 5;
 
-    //TODO: Add Java Doc Comments
+    /**
+     * Constant to be returned for result to Login Activity in case of success.
+     */
     private static final int RESULT_CODE_SUCCESS = 3;
 
     /**
@@ -65,12 +69,20 @@ public class SignUpActivity extends AppCompatActivity {
      */
     private DbAdapter dbhelper;
 
-    //TODO: Add Java Doc Comments
+    /**
+     * Getter for result code in case of cancellation.
+     *
+     * @return int
+     */
     public static int getResultCodeCanceled() {
         return RESULT_CODE_CANCELED;
     }
 
-    //TODO: Add Java Doc Comments
+    /**
+     * Getter for result code in case of successful registration.
+     *
+     * @return int
+     */
     public static int getResultCodeSuccess() {
         return RESULT_CODE_SUCCESS;
     }
@@ -102,15 +114,14 @@ public class SignUpActivity extends AppCompatActivity {
                 switch (v.getId()) {
                     case R.id.signupregistration_button:
                         addUser();
-                        //return added data and a result code
                         Intent intent = new Intent();
                         intent.putExtra("user", usernameInsert.getText().toString());
                         intent.putExtra("pass", passInsert.getText().toString());
-                        setResult(RESULT_CODE_SUCCESS, intent);//ok
+                        setResult(RESULT_CODE_SUCCESS, intent);
                         finish();
                         break;
                     case R.id.signupcancel_button:
-                        startActivity(new Intent(SignUpActivity.this, WelcomeActivity.class));
+                        setResult(RESULT_CODE_CANCELED);
                         break;
                     default:
                 }
@@ -130,13 +141,12 @@ public class SignUpActivity extends AppCompatActivity {
         confirm = confirmPassInsert.getText().toString();
 
         long id = dbhelper.insertData(username, pass);
-        if (id < 0 || username.isEmpty() || pass.isEmpty() || confirm.isEmpty() || pass.equals(confirm)) {
+        if (id < 0 || username.isEmpty() || pass.isEmpty() || confirm.isEmpty() || !pass.equals(confirm)) {
             Message.message(this, "Some fields are empty, or confirm password is different from password!");
             return false;
         } else {
             Message.message(this, "User Registered");
             startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
-
 
             new AsyncTask<String, Void, Long>() {
                 /**
@@ -159,7 +169,9 @@ public class SignUpActivity extends AppCompatActivity {
                     return id;
                 }
 
-
+                /**
+                 * {@inheritDoc}
+                 */
                 @Override
                 protected void onPostExecute(Long id) {
                     if (id < 0) {
@@ -168,16 +180,8 @@ public class SignUpActivity extends AppCompatActivity {
                         startActivity(new Intent(SignUpActivity.this, GameActivity.class));
                     }
                 }
-<<<<<<< HEAD
-            }
-        }.execute(username, pass);
-        return true;
-=======
             }.execute(username, pass);
             return true;
-
-//TODO: validation helper method to check if data is valid and confirmPassword is the same is passInsert
         }
->>>>>>> 3aae64fac49474755e84d000f4a852b428b2310f
     }
 }

@@ -34,8 +34,8 @@ public class Session {
      *
      * @param ctx
      */
-
     public Session(Context ctx) {
+
         /**
          * Set context
          */
@@ -59,6 +59,7 @@ public class Session {
      */
     public void setLoggedin(boolean loggedin) {
         new AsyncTask<Boolean, Void, Void>() {
+
             /**
              * Override this method to perform a computation on a background thread. The
              * specified parameters are the parameters passed to {@link #execute}
@@ -83,7 +84,6 @@ public class Session {
                 return null;
             }
         }.execute(loggedin);
-
     }
 
     /**
