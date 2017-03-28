@@ -114,19 +114,19 @@ public class Board implements Serializable {
     private int neighbours(int x, int y) {
         int amount = 0;
 
-        if (x > 0) {
+        if (x > 0 && cells[x - 1][y].getSize().value() != CAPTURE_IF_LESS) {
             amount += cells[x - 1][y].getSize().value();
         }
 
-        if (y > 0) {
+        if (y > 0 && cells[x][y - 1].getSize().value() != CAPTURE_IF_LESS) {
             amount += cells[x][y - 1].getSize().value();
         }
 
-        if (x < cells.length - 1) {
+        if (x < cells.length - 1 && cells[x + 1][y].getSize().value() != CAPTURE_IF_LESS) {
             amount += cells[x + 1][y].getSize().value();
         }
 
-        if (y < cells[x].length - 1) {
+        if (y < cells[x].length - 1 && cells[x][y + 1].getSize().value() != CAPTURE_IF_LESS) {
             amount += cells[x][y + 1].getSize().value();
         }
 
@@ -140,22 +140,22 @@ public class Board implements Serializable {
      * @param y Y coordinate.
      */
     private void remove(int x, int y) {
-        if (x > 0) {
+        if (x > 0 && cells[x - 1][y].getSize().value() != CAPTURE_IF_LESS) {
             cells[x - 1][y].setType(Type.EMPTY);
             cells[x - 1][y].setSize(Size.ZERO);
         }
 
-        if (y > 0) {
+        if (y > 0 && cells[x][y - 1].getSize().value() != CAPTURE_IF_LESS) {
             cells[x][y - 1].setType(Type.EMPTY);
             cells[x][y - 1].setSize(Size.ZERO);
         }
 
-        if (x < cells.length - 1) {
+        if (x < cells.length - 1 && cells[x + 1][y].getSize().value() != CAPTURE_IF_LESS) {
             cells[x + 1][y].setType(Type.EMPTY);
             cells[x + 1][y].setSize(Size.ZERO);
         }
 
-        if (y < cells[x].length - 1) {
+        if (y < cells[x].length - 1 && cells[x][y + 1].getSize().value() != CAPTURE_IF_LESS) {
             cells[x][y + 1].setType(Type.EMPTY);
             cells[x][y + 1].setSize(Size.ZERO);
         }
@@ -178,6 +178,7 @@ public class Board implements Serializable {
      * @return True if the click was valid move, false otherwise.
      */
     public synchronized boolean click(int x, int y) {
+
         /*
          *  Not empty cells can not be clicked.
 		 */
