@@ -31,7 +31,7 @@ public class WelcomeActivity extends AppCompatActivity {
         newGame.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(WelcomeActivity.this, GameActivity.class));
+                startActivity(new Intent(WelcomeActivity.this, LoginActivity.class));
             }
         });
     }

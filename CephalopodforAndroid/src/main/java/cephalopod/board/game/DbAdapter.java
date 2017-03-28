@@ -18,7 +18,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class DbAdapter {
 
     /**
-     * Declaration of fields of the adapter class. A reference to innerclass will be used in order to execute queries to the database.
+     * Declaration of fields of the adapter class. A reference to innerclass will executes queries.
      */
     private DbHelper helper;
 
@@ -29,36 +29,12 @@ public class DbAdapter {
      * @param context
      */
 
-    /**
-     * Singleton Pattern is used to instantiate a unique instance of the Database Adapter in order to use one database instance for the whole app.
-     */
-    private static DbAdapter uniqueInstance;
-
-    /**
-     * Constructor of the Database adapter. The the outer class field: reference of inner DbHelper class is instantiated with context parameter.
-     *
-     * @param context
-     */
-    private DbAdapter(Context context) {
+    public DbAdapter(Context context) {
         helper = new DbHelper(context);
     }
 
-
     /**
-     * A method to create a unique instance of the Database adapter.
-     *
-     * @param context
-     * @return
-     */
-    public static synchronized DbAdapter getInstance(Context context) {
-        if (uniqueInstance == null) {
-            uniqueInstance = new DbAdapter(context);
-        }
-        return uniqueInstance;
-    }
-
-    /**
-     * A method used to insert data in database.
+     * A method used to insert data
      *
      * @param username
      * @param password
@@ -134,8 +110,6 @@ public class DbAdapter {
     }
 
     /**
-     * Method which is used to get data about users from the database.
-     *
      * @param username
      * @return
      */
@@ -146,7 +120,6 @@ public class DbAdapter {
          *
          */
         SQLiteDatabase db = helper.getWritableDatabase();
-
         /**
          * select username,pass from CEPHALOPOD table
          */
@@ -165,7 +138,7 @@ public class DbAdapter {
             int index2 = cursor.getColumnIndex(DbHelper.COLUMN_PASS);
             String personUsername = cursor.getString(index1);
             String pass = cursor.getString(index2);
-            buffer.append(personUsername + " " + pass + "\n");
+            buffer.append(username + " " + pass + "\n");
         }
         return buffer.toString();
     }
@@ -178,10 +151,7 @@ public class DbAdapter {
      * @return
      */
     public boolean getUser(String username, String pass) {
-        String details = "";
-        if (!username.isEmpty() && (!pass.isEmpty())) {
-            details = username + " " + pass + "\n";
-        }
+        String details = username + " " + pass + "\n";
         if (details.equals(getData(username))) {
             return true;
         }
@@ -199,17 +169,14 @@ public class DbAdapter {
          * Definition of unique for the application database name. Specify a String constant.
          */
         private static final String DB_NAME = "cephalopod.db";
-
         /**
          * Definition of the database's table name. Specify a String constant.
          */
         private static final String TABLE_NAME = "CEPHALOPOD";
-
         /**
          * Constant String SQL statement for erasing old version of table.
          */
         public static final String DROP_TABLE = "DROP TABLE IF EXISTS " + TABLE_NAME;
-
         /**
          * Definition of database version int constant.When database is changed version should be modified to next int.
          */
@@ -252,7 +219,6 @@ public class DbAdapter {
          *
          * @param context
          */
-
         public DbHelper(Context context) {
             super(context, DB_NAME, null, DB_VERSION);
             this.context = context;
@@ -309,3 +275,4 @@ public class DbAdapter {
         }
     }
 }
+

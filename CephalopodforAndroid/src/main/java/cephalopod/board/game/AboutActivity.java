@@ -3,13 +3,15 @@ package cephalopod.board.game;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
 /**
  * About the product screen.
  */
-public class AboutActivity extends Activity {
+public class AboutActivity extends MenuActivity {
 
     /**
      * Return to Game screen.
@@ -35,5 +37,16 @@ public class AboutActivity extends Activity {
         };
 
         back.setOnClickListener(listener);
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+         super.onCreateOptionsMenu(menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
     }
 }
