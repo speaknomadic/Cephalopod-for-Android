@@ -119,7 +119,7 @@
             />
 
         <Button
-            android:id="@+id/signuploggin_button"
+            android:id="@+id/signupcancel_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
@@ -128,12 +128,8 @@
             android:layout_marginTop="0dp"
             android:background="@drawable/shadow"
             android:fontFamily="@string/app_name"
-            android:onClick="login"
-            android:text="LOGIN"
+            android:text="Cancel"
             android:textColor="@color/darkGrey"
-            android:textSize="20sp"
-
-
-            />
+            android:textSize="20sp" />
     </LinearLayout>
 </LinearLayout>

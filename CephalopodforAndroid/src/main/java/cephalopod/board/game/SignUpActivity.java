@@ -1,7 +1,6 @@
 package cephalopod.board.game;
 
 import android.content.Intent;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -70,12 +69,12 @@ public class SignUpActivity extends AppCompatActivity {
         /**
          * Initalization of fields.
          */
-        dbhelper = DbAdapter.getInstance(this);
+        dbhelper = new DbAdapter(this);
         usernameInsert = (EditText) findViewById(R.id.signupusername_insert);
         passInsert = (EditText) findViewById(R.id.signuppassword_insert);
         confirmPassInsert = (EditText) findViewById(R.id.signupconfirmpass_insert);
         signUp = (Button) findViewById(R.id.signupregistration_button);
-        logIn = (Button) findViewById(R.id.signuploggin_button);
+        logIn = (Button) findViewById(R.id.signupcancel_button);
 
         /**
          * Setting onclickListeners to the buttons.
@@ -87,7 +86,7 @@ public class SignUpActivity extends AppCompatActivity {
                     case R.id.signupregistration_button:
                         addUser();
                         break;
-                    case R.id.signuploggin_button:
+                    case R.id.signupcancel_button:
                         startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
                         break;
                     default:
@@ -101,55 +100,19 @@ public class SignUpActivity extends AppCompatActivity {
     /**
      * Method that calls the database object and enters data.
      */
-    public boolean addUser() {
-        String username, pass, confirm = "";
-        username = usernameInsert.getText().toString();
-        pass = passInsert.getText().toString();
-        confirm = confirmPassInsert.getText().toString();
+    public void addUser() {
+        String username = usernameInsert.getText().toString();
+        String pass = passInsert.getText().toString();
+        String confirm = confirmPassInsert.getText().toString();
 
         long id = dbhelper.insertData(username, pass);
-        if (id < 0 || username.isEmpty() || pass.isEmpty() || confirm.isEmpty() || pass.equals(confirm)) {
+        if (id < 0 || username.isEmpty() || pass.isEmpty() || confirm.isEmpty()|| !pass.equals(confirm)) {
             Message.message(this, "Some fields are empty, or confirm password is different from password!");
-            return false;
         } else {
             Message.message(this, "User Registered");
             startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
-
-
-            new AsyncTask<String, Void, Long>() {
-                /**
-                 * Override this method to perform a computation on a background thread. The
-                 * specified parameters are the parameters passed to {@link #execute}
-                 * by the caller of this task.
-                 * <p>
-                 * This method can call {@link #publishProgress} to publish updates
-                 * on the UI thread.
-                 *
-                 * @param params The parameters of the task.
-                 * @return A result, defined by the subclass of this task.
-                 * @see #onPreExecute()
-                 * @see #onPostExecute
-                 * @see #publishProgress
-                 */
-                @Override
-                protected Long doInBackground(String... params) {
-                    long id = dbhelper.insertData(params[0], params[1]);
-                    return id;
-                }
-
-
-                @Override
-                protected void onPostExecute(Long id) {
-                    if (id < 0) {
-                        Message.message(SignUpActivity.this, "Registration was not successful!");
-                    } else {
-                        startActivity(new Intent(SignUpActivity.this, GameActivity.class));
-                    }
-                }
-            }.execute(username, pass);
-            return true;
-
-//TODO: validation helper method to check if data is valid and confirmPassword is the same is passInsert
         }
     }
+
 }
+

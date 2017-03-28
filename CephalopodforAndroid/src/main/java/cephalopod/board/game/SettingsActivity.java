@@ -4,6 +4,8 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.IdRes;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.Toast;
@@ -11,9 +13,10 @@ import android.widget.Toast;
 /**
  * Settings screen.
  */
-public class SettingsActivity extends Activity {
+public class SettingsActivity extends MenuActivity {
 
     RadioGroup radioGroup;
+
 
     /**
      * {@inheritDoc}
@@ -40,5 +43,18 @@ public class SettingsActivity extends Activity {
                 }
             }
         });
+
+
     }
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        super.onCreateOptionsMenu(menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        return super.onOptionsItemSelected(item);
+    }
+
 }

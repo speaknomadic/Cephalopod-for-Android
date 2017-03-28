@@ -53,6 +53,9 @@ public class MenuActivity extends Activity {
             case R.id.about:
                 startActivity(new Intent(this, AboutActivity.class));
                 return true;
+            case R.id.log_out:
+                startActivity(new Intent(this, WelcomeActivity.class));
+                return true;
             default:
                 return super.onOptionsItemSelected(item);
         }
