@@ -80,11 +80,21 @@ public class SignUpActivity extends AppCompatActivity {
          * Setting onclickListeners to the buttons.
          */
         View.OnClickListener listener = new View.OnClickListener() {
+
+
             @Override
             public void onClick(View v) {
+                String username = usernameInsert.getText().toString();
+                String password = passInsert.getText().toString();
+
                 switch (v.getId()) {
                     case R.id.signupregistration_button:
-                        addUser();
+                       if( addUser()){
+                        Intent intent = new Intent(SignUpActivity.this,LoginActivity.class);
+                        intent.putExtra("username",username);
+                        intent.putExtra("password",password);
+                        startActivity(intent);
+                       }
                         break;
                     case R.id.signupcancel_button:
                         startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
@@ -100,7 +110,7 @@ public class SignUpActivity extends AppCompatActivity {
     /**
      * Method that calls the database object and enters data.
      */
-    public void addUser() {
+    public boolean addUser() {
         String username = usernameInsert.getText().toString();
         String pass = passInsert.getText().toString();
         String confirm = confirmPassInsert.getText().toString();
@@ -108,9 +118,11 @@ public class SignUpActivity extends AppCompatActivity {
         long id = dbhelper.insertData(username, pass);
         if (id < 0 || username.isEmpty() || pass.isEmpty() || confirm.isEmpty()|| !pass.equals(confirm)) {
             Message.message(this, "Some fields are empty, or confirm password is different from password!");
+            return false;
         } else {
             Message.message(this, "User Registered");
             startActivity(new Intent(SignUpActivity.this, LoginActivity.class));
+            return true;
         }
     }
 

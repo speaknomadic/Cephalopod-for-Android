@@ -3,6 +3,7 @@ package cephalopod.board.game;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -62,7 +63,27 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        /**
+         * Initalization of fields.
+         */
+        db = new DbAdapter(this);
+        session = new Session(this);
+        login = (Button) findViewById(R.id.login_button);
+        signUp = (Button) findViewById(R.id.registration_button);
+        username = (TextView) findViewById(R.id.username_text);
+        password = (TextView) findViewById(R.id.password_text);
+        usernameInsert = (EditText) findViewById(R.id.username_insert);
+        passwordInsert = (EditText) findViewById(R.id.password_insert);
+
+        String username = getIntent().getStringExtra("username");
+        String pass = getIntent().getStringExtra("password");
+
+        usernameInsert.setText(username);
+        passwordInsert.setText(pass);
+
         View.OnClickListener listener = new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
                 switch (v.getId()) {
@@ -77,17 +98,8 @@ public class LoginActivity extends AppCompatActivity {
             }
         };
 
-        /**
-         * Initalization of fields.
-         */
-        db = new DbAdapter(this);
-        session = new Session(this);
-        login = (Button) findViewById(R.id.login_button);
-        signUp = (Button) findViewById(R.id.registration_button);
-        username = (TextView) findViewById(R.id.username_text);
-        password = (TextView) findViewById(R.id.password_text);
-        usernameInsert = (EditText) findViewById(R.id.username_insert);
-        passwordInsert = (EditText) findViewById(R.id.password_insert);
+
+
 
         /**
          * Setting onclickListeners to the buttons.
